@@ -100,7 +100,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param borderLineJoin The border line join.
  */
-///
 - (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius corners:(UIRectCorner)corners borderWidth:(CGFloat)borderWidth borderColor:(nullable UIColor *)borderColor borderLineJoin:(CGLineJoin)borderLineJoin;
 
 /// 将指定的图片绕中心旋转，radians：逆时针旋转角度⟲，fitSize：是否自适应，YES：图片的尺寸将会适当的拉伸，NO：图片的尺寸不会改变，担可能会被裁剪

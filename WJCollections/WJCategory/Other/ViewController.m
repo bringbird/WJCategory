@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSDate+WJAdd.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSDate *now = [[NSDate alloc]init];
+    [now stringWithFormat:@"yyyy-"];
 }
 
 - (void)didReceiveMemoryWarning {

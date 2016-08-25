@@ -27,4 +27,5 @@
 
 /// 图 完成回调
 - (void)wj_setImageWithURL:(NSString *)imageURL completed:(void(^)(UIImage *image, NSURL *url))completedBlock;
+
 @end

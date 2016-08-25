@@ -10,52 +10,28 @@
 
 @interface UIScrollView (WJAdd)
 
-/**
- Scroll content to top with animation.
- */
+/// 动画地滑动至顶部
 - (void)scrollToTop;
 
-/**
- Scroll content to bottom with animation.
- */
+/// 动画地滑动至底部
 - (void)scrollToBottom;
 
-/**
- Scroll content to left with animation.
- */
+/// 动画地滑动至左边
 - (void)scrollToLeft;
 
-/**
- Scroll content to right with animation.
- */
+/// 动画地滑动至右边
 - (void)scrollToRight;
 
-/**
- Scroll content to top.
- 
- @param animated  Use animation.
- */
+/// 滑动至顶部，animated：是否需要动画。
 - (void)scrollToTopAnimated:(BOOL)animated;
 
-/**
- Scroll content to bottom.
- 
- @param animated  Use animation.
- */
+/// 滑动至底部，animated：是否需要动画。
 - (void)scrollToBottomAnimated:(BOOL)animated;
 
-/**
- Scroll content to left.
- 
- @param animated  Use animation.
- */
+/// 滑动至左边，animated：是否需要动画。
 - (void)scrollToLeftAnimated:(BOOL)animated;
 
-/**
- Scroll content to right.
- 
- @param animated  Use animation.
- */
+/// 滑动至右边，animated：是否需要动画。
 - (void)scrollToRightAnimated:(BOOL)animated;
 
 @end
