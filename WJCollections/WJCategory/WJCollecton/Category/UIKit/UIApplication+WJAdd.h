@@ -34,8 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// Application's Build number. e.g. "123"
 @property (nullable, nonatomic, readonly) NSString *appBuildVersion;
 
+/// 开启状态栏网络状态指示器
 + (void)showNetWorkActivityIndicator;
 
+/// 关闭状态栏网络状态指示器
 + (void)hidNetWorkActivityIndicator;
 
 @end

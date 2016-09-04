@@ -9,6 +9,5 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "WJCollection.h"
 
 #endif

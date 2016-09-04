@@ -10,18 +10,12 @@
 #import <objc/runtime.h>
 
 static const int block_key;
-
 @interface _UIGestureRecognizerBlockTarget : NSObject
-
 @property (nonatomic, copy) void (^block)(id sender);
-
 - (id)initWithBlock:(void (^)(id sender))block;
 - (void)invoke:(id)sender;
-
 @end
-
 @implementation _UIGestureRecognizerBlockTarget
-
 - (id)initWithBlock:(void (^)(id sender))block{
     self = [super init];
     if (self) {
@@ -29,29 +23,24 @@ static const int block_key;
     }
     return self;
 }
-
 - (void)invoke:(id)sender {
     if (_block) _block(sender);
 }
-
 @end
 
 
 @implementation UIGestureRecognizer (WJAdd)
-
 - (instancetype)initWithActionBlock:(void (^)(id sender))block {
     self = [self init];
     [self addActionBlock:block];
     return self;
 }
-
 - (void)addActionBlock:(void (^)(id sender))block {
     _UIGestureRecognizerBlockTarget *target = [[_UIGestureRecognizerBlockTarget alloc] initWithBlock:block];
     [self addTarget:target action:@selector(invoke:)];
     NSMutableArray *targets = [self _allUIGestureRecognizerBlockTargets];
     [targets addObject:target];
 }
-
 - (void)removeAllActionBlocks{
     NSMutableArray *targets = [self _allUIGestureRecognizerBlockTargets];
     [targets enumerateObjectsUsingBlock:^(id target, NSUInteger idx, BOOL *stop) {

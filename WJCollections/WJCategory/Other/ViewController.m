@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "NSDate+WJAdd.h"
+#import "WJCollection.h"
+
 
 @interface ViewController ()
 
@@ -17,14 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDate *now = [[NSDate alloc]init];
-    [now stringWithFormat:@"yyyy-"];
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:@"" object:@"" userInfo:@"" waitUntilDone:1];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-
-}
 
 @end

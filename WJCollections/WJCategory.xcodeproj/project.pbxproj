@@ -23,6 +23,8 @@
 		6B5BFE421D68B2E100E3251A /* WJShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BFE3F1D68B2E100E3251A /* WJShareView.m */; };
 		6B5BFE631D68FB6600E3251A /* WJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BFE621D68FB6600E3251A /* WJTextView.m */; };
 		6B5BFE661D68FD7800E3251A /* WJNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BFE651D68FD7800E3251A /* WJNetworking.m */; };
+		6B7D3E8B1D7B8AB9005171C6 /* WJMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3E8A1D7B8AB9005171C6 /* WJMoveView.m */; };
+		6B7D3E941D7B98E9005171C6 /* WJDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3E931D7B98E9005171C6 /* WJDataTool.m */; };
 		6B80179A1D6DF7B500866A80 /* UIControl+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8017991D6DF7B500866A80 /* UIControl+WJAdd.m */; };
 		6B80179D1D6DF95A00866A80 /* UIGestureRecognizer+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B80179C1D6DF95A00866A80 /* UIGestureRecognizer+WJAdd.m */; };
 		6B8017A01D6DFB9000866A80 /* UIScrollView+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B80179F1D6DFB9000866A80 /* UIScrollView+WJAdd.m */; };
@@ -40,6 +42,7 @@
 		6B91892E1D6A887400824666 /* UIDevice+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B91892D1D6A887400824666 /* UIDevice+WJAdd.m */; };
 		6BA14DB91D6E09F800ED980F /* UIScreen+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA14DB81D6E09F800ED980F /* UIScreen+WJAdd.m */; };
 		6BAB43561D6B2CE00006CA85 /* NSTimer+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB43551D6B2CE00006CA85 /* NSTimer+WJAdd.m */; };
+		6BD7E3781D71090800C9076C /* WJPermissionsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7E3771D71090800C9076C /* WJPermissionsTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,10 @@
 		6B5BFE621D68FB6600E3251A /* WJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJTextView.m; sourceTree = "<group>"; };
 		6B5BFE641D68FD7800E3251A /* WJNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJNetworking.h; sourceTree = "<group>"; };
 		6B5BFE651D68FD7800E3251A /* WJNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJNetworking.m; sourceTree = "<group>"; };
+		6B7D3E891D7B8AB9005171C6 /* WJMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJMoveView.h; sourceTree = "<group>"; };
+		6B7D3E8A1D7B8AB9005171C6 /* WJMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJMoveView.m; sourceTree = "<group>"; };
+		6B7D3E921D7B98E9005171C6 /* WJDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJDataTool.h; sourceTree = "<group>"; };
+		6B7D3E931D7B98E9005171C6 /* WJDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJDataTool.m; sourceTree = "<group>"; };
 		6B8017981D6DF7B500866A80 /* UIControl+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+WJAdd.h"; sourceTree = "<group>"; };
 		6B8017991D6DF7B500866A80 /* UIControl+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+WJAdd.m"; sourceTree = "<group>"; };
 		6B80179B1D6DF95A00866A80 /* UIGestureRecognizer+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+WJAdd.h"; sourceTree = "<group>"; };
@@ -108,6 +115,8 @@
 		6BA14DB81D6E09F800ED980F /* UIScreen+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WJAdd.m"; sourceTree = "<group>"; };
 		6BAB43541D6B2CE00006CA85 /* NSTimer+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WJAdd.h"; sourceTree = "<group>"; };
 		6BAB43551D6B2CE00006CA85 /* NSTimer+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WJAdd.m"; sourceTree = "<group>"; };
+		6BD7E3761D71090800C9076C /* WJPermissionsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPermissionsTool.h; sourceTree = "<group>"; };
+		6BD7E3771D71090800C9076C /* WJPermissionsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPermissionsTool.m; sourceTree = "<group>"; };
 		E4FD1D7011BB92492529A510 /* Pods-WJCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJCategory.release.xcconfig"; path = "Pods/Target Support Files/Pods-WJCategory/Pods-WJCategory.release.xcconfig"; sourceTree = "<group>"; };
 		E8D86DC17FDFCDDBCB7016CF /* Pods-WJCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJCategory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WJCategory/Pods-WJCategory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,8 +224,12 @@
 		6B5BFE3C1D68B2E100E3251A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6B7D3E921D7B98E9005171C6 /* WJDataTool.h */,
+				6B7D3E931D7B98E9005171C6 /* WJDataTool.m */,
 				6B5BFE641D68FD7800E3251A /* WJNetworking.h */,
 				6B5BFE651D68FD7800E3251A /* WJNetworking.m */,
+				6BD7E3761D71090800C9076C /* WJPermissionsTool.h */,
+				6BD7E3771D71090800C9076C /* WJPermissionsTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -228,6 +241,8 @@
 				6B5BFE3F1D68B2E100E3251A /* WJShareView.m */,
 				6B5BFE611D68FB6600E3251A /* WJTextView.h */,
 				6B5BFE621D68FB6600E3251A /* WJTextView.m */,
+				6B7D3E891D7B8AB9005171C6 /* WJMoveView.h */,
+				6B7D3E8A1D7B8AB9005171C6 /* WJMoveView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,8 +439,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7D3E941D7B98E9005171C6 /* WJDataTool.m in Sources */,
 				6B80179A1D6DF7B500866A80 /* UIControl+WJAdd.m in Sources */,
 				6B9189251D6A6E1700824666 /* CALayer+WJAdd.m in Sources */,
+				6BD7E3781D71090800C9076C /* WJPermissionsTool.m in Sources */,
 				6B1E51EE1D6A4580003C979F /* UIImageView+WJAdd.m in Sources */,
 				6B1E51ED1D6A4580003C979F /* UIImage+WJAdd.m in Sources */,
 				6B1E51EC1D6A4580003C979F /* UIColor+WJAdd.m in Sources */,
@@ -436,6 +453,7 @@
 				6B1E51E81D6A4580003C979F /* MBProgressHUD+WJAdd.m in Sources */,
 				6B1E51F21D6A4AC5003C979F /* NSArray+WJAdd.m in Sources */,
 				6BAB43561D6B2CE00006CA85 /* NSTimer+WJAdd.m in Sources */,
+				6B7D3E8B1D7B8AB9005171C6 /* WJMoveView.m in Sources */,
 				6B8017A31D6DFBD600866A80 /* UITableView+WJAdd.m in Sources */,
 				6B8017A01D6DFB9000866A80 /* UIScrollView+WJAdd.m in Sources */,
 				6BA14DB91D6E09F800ED980F /* UIScreen+WJAdd.m in Sources */,
