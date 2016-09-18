@@ -10,16 +10,16 @@
 
 @interface UIScrollView (WJAdd)
 
-/// 动画地滑动至顶部
+/// 动画地滑动至顶部。
 - (void)scrollToTop;
 
-/// 动画地滑动至底部
+/// 动画地滑动至底部。
 - (void)scrollToBottom;
 
-/// 动画地滑动至左边
+/// 动画地滑动至左边。
 - (void)scrollToLeft;
 
-/// 动画地滑动至右边
+/// 动画地滑动至右边。
 - (void)scrollToRight;
 
 /// 滑动至顶部，animated：是否需要动画。
