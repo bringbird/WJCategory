@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface WJDataTool : NSObject
-
+ 
 /// 保存单个数据
 + (void)saveObject:(NSString *)object forKey:(NSString *)key;
 /// 保存多个数据
