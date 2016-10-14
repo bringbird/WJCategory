@@ -39,7 +39,7 @@
 
 - (instancetype)initWithWJShowShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles handler:(wj_shareHandler)handler {
     if (self = [super init]) {
-        NSAssert(images.count == titles.count && (images || titles != nil),@"images count must be equal to the titles count and Both can't be empty!!");
+        NSAssert(images.count == titles.count && (images || titles != nil),@"images count must be equal to the titles count and Both can't be empty!");
         self.images = images;
         self.titles = titles;
         [self setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
