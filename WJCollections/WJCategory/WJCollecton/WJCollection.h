@@ -35,8 +35,12 @@
 
 #import "WJConst.h"
 
+#import "WJDataTool.h"
 #import "WJNetworking.h"
 #import "WJPermissionsTool.h"
+#import "WJTimer.h"
+#import "WJHUD.h"
+#import "WJImagePicker.h"
 
 #import "WJShareView.h"
 #import "WJTextView.h"

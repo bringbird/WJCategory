@@ -22,15 +22,50 @@ static inline double systemVersion() {
 
 @implementation WJPermissionsTool
 
-+ (PermissionsType)getVideoPerssion {
-    return [self getMediaPressionWityMediaType:AVMediaTypeVideo];
++ (PermissionsType)registerVideoPerssion {
+    return [self registerPressionWityMediaType:AVMediaTypeVideo];
 }
 
-+ (PermissionsType)getAudioPerssion {
-    return [self getMediaPressionWityMediaType:AVMediaTypeVideo];
++ (PermissionsType)registerAudioPerssion {
+    return [self registerPressionWityMediaType:AVMediaTypeAudio];
 }
 
-+ (PermissionsType)getMediaPressionWityMediaType:(NSString *)mediatype {
++ (void)registerAPNS {
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+}
+
++ (BOOL)isOpenVideoPerssion {
+    if(systemVersion() >= 7.0) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        if (status == AVAuthorizationStatusAuthorized) {
+            return YES;
+        } else return NO;
+    }
+    return NO;
+}
+
++ (BOOL)isOpenAudioPerssion {
+    if(systemVersion() >= 7.0) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+        if (status == AVAuthorizationStatusAuthorized) {
+            return YES;
+        } else return NO;
+    }
+    return NO;
+}
+
++ (BOOL)isOpenAPNS {
+    if ([[UIApplication sharedApplication] isRegisteredForRemoteNotifications]) {
+        return YES;
+    } else return NO;
+}
+
++ (PermissionsType)registerPressionWityMediaType:(NSString *)mediatype {
     __block PermissionsType type;
     if(systemVersion() >= 7.0) {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:mediatype];

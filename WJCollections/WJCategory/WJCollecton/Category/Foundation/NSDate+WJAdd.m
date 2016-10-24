@@ -198,5 +198,34 @@
     return [formatter stringFromDate:self];
 }
 
+
++ (BOOL)isBetweenFromHour:(float)fromHour toHour:(float)toHour {
+    NSDate *from = [self getCustomDateWithHour:fromHour];
+    NSDate *to   = [self getCustomDateWithHour:toHour];
+    NSDate *now  = [NSDate date];
+    if ([now compare:from] == NSOrderedDescending && [now compare:to]==NSOrderedAscending) {
+        return YES;
+    }
+    return NO;
+}
+
+// 生成当天的某个点，如hour为“8”，就是上午8:00（本地时间）
++ (NSDate *)getCustomDateWithHour:(float)hour {
+    //获取当前时间
+    NSDate *currentDate = [NSDate date];
+    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
+    NSDateComponents *currentComps = [[NSDateComponents alloc] init];
+    
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    currentComps = [currentCalendar components:unitFlags fromDate:currentDate];
+    //设置当天的某个点
+    NSDateComponents *resultComps = [[NSDateComponents alloc] init];
+    [resultComps setYear:[currentComps year]];
+    [resultComps setMonth:[currentComps month]];
+    [resultComps setDay:[currentComps day]];
+    [resultComps setMinute:hour * 60];
+    NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
+    return [resultCalendar dateFromComponents:resultComps];
+}
 @end 
 

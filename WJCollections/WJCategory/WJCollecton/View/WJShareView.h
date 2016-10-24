@@ -10,8 +10,8 @@
 
 @interface WJShareView : UIView
 
-typedef void (^wj_shareHandler)(NSUInteger index);
+typedef void (^shareHandler)(NSUInteger index);
 
-+ (instancetype)showShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles shareHandler:(wj_shareHandler)handler;
++ (instancetype)showShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles shareHandler:(shareHandler)handler;
 
 @end

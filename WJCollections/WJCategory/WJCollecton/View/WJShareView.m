@@ -32,12 +32,12 @@
     return _shareWindow;
 }
 
-+ (instancetype)showShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles shareHandler:(wj_shareHandler)handler {
++ (instancetype)showShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles shareHandler:(shareHandler)handler {
     return [[self alloc] initWithWJShowShareViewWithImages:images titles:titles handler:handler];
     
 }
 
-- (instancetype)initWithWJShowShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles handler:(wj_shareHandler)handler {
+- (instancetype)initWithWJShowShareViewWithImages:(NSArray<UIImage *> *)images titles:(NSArray<NSString *> *)titles handler:(shareHandler)handler {
     if (self = [super init]) {
         NSAssert(images.count == titles.count && (images || titles != nil),@"images count must be equal to the titles count and Both can't be empty!");
         self.images = images;
@@ -70,9 +70,9 @@
 
 - (void)configSharebutton {
     UIView *shareBgView = [[UIView alloc]init];
-    shareBgView.wj_left = 0;
-    shareBgView.wj_top = self.wj_height;
-    shareBgView.wj_width = _shareWindow.wj_width;
+    shareBgView.left = 0;
+    shareBgView.top = self.height;
+    shareBgView.width = _shareWindow.width;
     shareBgView.backgroundColor = [UIColor whiteColor];
     
     CGFloat margin = 10;
@@ -86,25 +86,25 @@
         i = i > 5 ? i - 5 : i;
         [shareButton setImage:self.images[i] forState:UIControlStateNormal];
         shareButton.tag = i;
-        shareButton.wj_left = margin + (i * ( margin + shareButtonWH));
-        shareButton.wj_top = shareButtonY;
+        shareButton.left = margin + (i * ( margin + shareButtonWH));
+        shareButton.top = shareButtonY;
         [shareButton addTarget:self action:@selector(shareButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        shareButton.wj_size = CGSizeMake(shareButtonWH, shareButtonWH);
+        shareButton.size = CGSizeMake(shareButtonWH, shareButtonWH);
         [shareBgView addSubview:shareButton];
         UILabel *titleLab = [[UILabel alloc]init];
         [titleLab setText:self.titles[i]];
         titleLab.font = [UIFont systemFontOfSize:11];
         [titleLab setTextColor:[UIColor colorWithWhite:0.000 alpha:0.799]];
         titleLab.textAlignment = NSTextAlignmentCenter;
-        titleLab.wj_width = titleLabWidh;
-        titleLab.wj_height = titleLabHeight;
-        titleLab.wj_centerX = shareButton.wj_centerX;
-        titleLab.wj_bottom = shareButton.wj_bottom - 5;
+        titleLab.width = titleLabWidh;
+        titleLab.height = titleLabHeight;
+        titleLab.centerX = shareButton.centerX;
+        titleLab.bottom = shareButton.bottom - 5;
         [shareBgView addSubview:titleLab];
-        titleLabMaxY = titleLab.wj_bottom;
+        titleLabMaxY = titleLab.bottom;
     }
     
-    shareBgView.wj_height = titleLabMaxY + margin;
+    shareBgView.height = titleLabMaxY + margin;
     [self addSubview:shareBgView];
     self.shareBgView = shareBgView;
 }
@@ -127,14 +127,14 @@
     [UIView animateWithDuration:0.3f delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         [_maskView setAlpha:0.5];
         [_maskView setUserInteractionEnabled:YES];
-        self.shareBgView.wj_bottom -= _shareBgView.wj_height;
+        self.shareBgView.bottom -= _shareBgView.height;
     } completion:nil];
     self.isShow = YES;
 }
 
 - (void)dismiss {
     [UIView animateWithDuration:0.3f delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        self.shareBgView.wj_top += _shareBgView.wj_height;
+        self.shareBgView.top += _shareBgView.height;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.3f delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [_maskView setAlpha:0];

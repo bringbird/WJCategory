@@ -17,10 +17,22 @@ typedef NS_OPTIONS(NSUInteger, PermissionsType) {
 
 @interface WJPermissionsTool : NSObject
 
-/// 获取相机权限 return：相机权限
-+ (PermissionsType)getVideoPerssion;
+/// 注册相机权限 return：摄像机权限
++ (PermissionsType)registerVideoPerssion;
 
-/// 获取麦克风权限 return：麦克风权限
-+ (PermissionsType)getAudioPerssion;
+/// 注册麦克风权限 return：麦克风权限
++ (PermissionsType)registerAudioPerssion;
+
+/// 注册通知
++ (void)registerAPNS;
+
+/// 是否开启摄像机权限
++ (BOOL)isOpenVideoPerssion;
+
+/// 是否已获取麦克风权限
++ (BOOL)isOpenAudioPerssion;
+
+/// 是否开启通知权限
++ (BOOL)isOpenAPNS;
 
 @end

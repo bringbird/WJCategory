@@ -8,6 +8,7 @@
 
 #import "WJNetworking.h"
 #import <AFNetworking.h>
+#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation WJNetworking
 

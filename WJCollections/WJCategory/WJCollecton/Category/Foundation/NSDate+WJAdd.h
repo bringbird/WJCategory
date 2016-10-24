@@ -33,6 +33,9 @@
 @property (nonatomic, readonly) BOOL isThisYear;    ///< 是否是今年
 @property (nonatomic, readonly) BOOL isNextYear;    ///< 是否是明年
 
+/// 是否是当天指定的时间段内
++ (BOOL)isBetweenFromHour:(float)fromHour toHour:(float)toHour;
+
 /// 指定日期加上年
 - (NSDate *)dateByAddingYears:(NSInteger)years;
 

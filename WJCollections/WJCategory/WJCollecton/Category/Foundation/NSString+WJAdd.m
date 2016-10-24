@@ -212,6 +212,20 @@
     return [self rangeOfString:string].location != NSNotFound;
 }
 
+- (int)convert2Int {
+    int strlength = 0;
+    char* p = (char *)[self cStringUsingEncoding:NSUnicodeStringEncoding];
+    for (int i=0 ; i < [self lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
+        if (*p) {
+            p++;
+            strlength++;
+        } else {
+            p++;
+        }
+    }
+    return (strlength);
+}
+
 + (NSString *)stringWithUTF32Char:(UTF32Char)char32 {
     char32 = NSSwapHostIntToLittle(char32);
     return [[NSString alloc] initWithBytes:&char32 length:4 encoding:NSUTF32LittleEndianStringEncoding];

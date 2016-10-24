@@ -10,7 +10,7 @@
 #import "WJCollection.h"
 
 
-@interface ViewController ()
+@interface ViewController ()//<WJTimerDelegate>
 
 @end
 
@@ -18,10 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor darkGrayColor];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:@"" object:@"" userInfo:@"" waitUntilDone:1];
+    self.view.backgroundColor = [UIColor randomColor];
 }
-
 
 @end

@@ -91,6 +91,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 正则匹配，regex：正则表达式，options：匹配方式
 - (BOOL)matchesRegex:(NSString *)regex options:(NSRegularExpressionOptions)options;
 
+/// 获取指定字符串的字节长度
+- (int)convert2Int;
+
 /// 将 ‘UTF32Char’ 字符数组转成 ’NSString‘ ，length：数组长度
 + (NSString *)stringWithUTF32Chars:(const UTF32Char *)char32 length:(NSUInteger)length;
 

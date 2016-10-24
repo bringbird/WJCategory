@@ -27,6 +27,11 @@ static inline CGSize  screenSize() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         size = [UIScreen mainScreen].bounds.size;
+        if (size.height < size.width) {
+            CGFloat tmp = size.height;
+            size.height = size.width;
+            size.width = tmp;
+        }
     });
     return size;
 }
@@ -55,25 +60,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (WJAdd)
 
-@property (nonatomic) CGFloat wj_left;
-@property (nonatomic) CGFloat wj_top;
-@property (nonatomic) CGFloat wj_right;
-@property (nonatomic) CGFloat wj_bottom;
-@property (nonatomic) CGFloat wj_width;
-@property (nonatomic) CGFloat wj_height;
-@property (nonatomic) CGFloat wj_centerX;
-@property (nonatomic) CGFloat wj_centerY;
-@property (nonatomic) CGPoint wj_origin;
-@property (nonatomic) CGSize  wj_size;
+@property (nonatomic) CGFloat left;
+@property (nonatomic) CGFloat top;
+@property (nonatomic) CGFloat right;
+@property (nonatomic) CGFloat bottom;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat centerX;
+@property (nonatomic) CGFloat centerY;
+@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGSize  size;
 
-/**
- Returns the view's view controller (may be nil).
- */
+/// 返回 View 所在的 controller (可能会为空)
 @property (nullable, nonatomic, readonly) UIViewController *viewController;
 
-/**
- Returns the visible alpha on screen, taking into account superview and window.
- */
+/// 返回其在屏幕中的可见透明度，取决于所在的 superview 和 window
 @property (nonatomic, readonly) CGFloat visibleAlpha;
 
 /// 从 nib 文件加载 View
