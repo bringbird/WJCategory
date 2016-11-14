@@ -1,8 +1,8 @@
 //
 //  NSString+WJAdd.m
-//  WJCategory
 //
-//  Created by bringbird on 16/8/21.
+//
+//  Created by bringbird on https://github.com/bringbird 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 

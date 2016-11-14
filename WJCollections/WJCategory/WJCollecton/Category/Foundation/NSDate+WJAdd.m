@@ -1,8 +1,8 @@
 //
 //  NSDate+WJAdd.m
-//  WJCategory
 //
-//  Created by bringbird on 16/8/21.
+//
+//  Created by bringbird on https://github.com/bringbird 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
@@ -78,6 +78,11 @@
 - (BOOL)isToday {
     if (fabs(self.timeIntervalSinceNow) >= 60 * 60 * 24) return NO;
     return [NSDate new].day == self.day;
+}
+
+- (BOOL)isThisWeek {
+    NSDate *currentDate = [NSDate new];
+    return (self.second - currentDate.second) <= (60 * 60 * 24 * 7);
 }
 
 - (BOOL)isYesterday {
@@ -190,6 +195,10 @@
     return [formatter stringFromDate:self];
 }
 
++ (NSDate *)currentTimesTamp {
+    return [self dateWithTimeIntervalSinceNow:0];
+}
+
 - (NSString *)stringWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:format];
@@ -227,5 +236,5 @@
     NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
     return [resultCalendar dateFromComponents:resultComps];
 }
-@end 
+@end
 

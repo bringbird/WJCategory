@@ -1,8 +1,8 @@
 //
 //  NSDate+WJAdd.h
-//  WJCategory
 //
-//  Created by bringbird on 16/8/21.
+//
+//  Created by bringbird on https://github.com/bringbird 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
@@ -26,6 +26,7 @@
 @property (nonatomic, readonly) BOOL isLeapYear;    ///< 是否是闰年
 @property (nonatomic, readonly) BOOL isToday;       ///< 是否是今天
 @property (nonatomic, readonly) BOOL isYesterday;   ///< 是否是昨天
+@property (nonatomic, readonly) BOOL isThisWeek;    ///< 是否是这个星期
 @property (nonatomic, readonly) BOOL isLastMonth;   ///< 是否是上个月
 @property (nonatomic, readonly) BOOL isThisMonth;   ///< 是否是这个月
 @property (nonatomic, readonly) BOOL isNextMonth;   ///< 是否是下个月
@@ -65,6 +66,9 @@
 
 /// 时间转时间字符串，format：时间格式
 - (NSString *)stringWithFormat:(NSString *)format;
+
+/// 当前时间戳
++ (NSDate *)currentTimesTamp;
 
 /// 时间转时间字符串，format：时间格式 timeZone：时区，locale：地区
 - (NSString *)stringWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale;

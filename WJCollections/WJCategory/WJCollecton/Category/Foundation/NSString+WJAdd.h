@@ -1,8 +1,8 @@
 //
 //  NSString+WJAdd.h
-//  WJCategory
 //
-//  Created by bringbird on 16/8/21.
+//
+//  Created by bringbird on https://github.com/bringbird 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isMobileNumber;
 
 /// 字符串是否为空(nil, @"", @"  ", @"\n")
-- (BOOL)isNotBlank; 
+- (BOOL)isNotBlank;
 
 /// 正则匹配，regex：正则表达式，options：匹配方式
 - (BOOL)matchesRegex:(NSString *)regex options:(NSRegularExpressionOptions)options;
