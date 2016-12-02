@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface NSArray (WJAdd)
 
+/// 是否为空数组
+- (BOOL)isEmpetyArray;
+
 /// 将指定的plist文件数据转成数组，plist：必须为数组类型
 + (nullable NSArray *)arrayWithPlistData:(NSData *)plist;
 
@@ -71,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)insertObjects:(NSArray *)objects atIndex:(NSUInteger)index;
 
 /// 数组翻转 @[ @1, @2, @3 ] -> @[ @3, @2, @1 ]
-- (void)reverse;
+- (instancetype)reverse;
 
 /// 将数组随机排序
 - (void)shuffle;

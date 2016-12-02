@@ -10,6 +10,10 @@
 
 @implementation NSArray (WJAdd)
 
+- (BOOL)isEmpetyArray {
+    return self.count == 0;
+}
+
 + (NSArray *)arrayWithPlistData:(NSData *)plist {
     if (!plist) return nil;
     NSArray *array = [NSPropertyListSerialization propertyListWithData:plist options:NSPropertyListImmutable format:NULL error:NULL];
@@ -70,7 +74,19 @@
     }
     return nil;
 }
-
+- (NSString *)descriptionWithLocale:(id)locale {
+    NSMutableString *str = [NSMutableString string];
+    [str appendString:@"[\n"];
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [str appendFormat:@"%@,\n", obj];
+    }];
+    [str appendString:@"]"];
+    NSRange range = [str rangeOfString:@"," options:NSBackwardsSearch];
+    if (range.length != 0) {
+        [str deleteCharactersInRange:range];
+    }
+    return str;
+}
 @end
 
 
@@ -144,18 +160,20 @@
 }
 
 - (void)insertObjects:(NSArray *)objects atIndex:(NSUInteger)index {
+    if (!objects) return;
     NSUInteger i = index;
     for (id obj in objects) {
         [self insertObject:obj atIndex:i++];
     }
 }
 
-- (void)reverse {
+- (instancetype)reverse {
     NSUInteger count = self.count;
     int mid = floor(count / 2.0);
     for (NSUInteger i = 0; i < mid; i++) {
         [self exchangeObjectAtIndex:i withObjectAtIndex:(count - (i + 1))];
     }
+    return self;
 }
 
 - (void)shuffle {
