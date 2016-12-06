@@ -80,14 +80,13 @@
     return [NSDate new].day == self.day;
 }
 
-- (BOOL)isThisWeek {
-    NSDate *currentDate = [NSDate new];
-    return (self.second - currentDate.second) <= (60 * 60 * 24 * 7);
+- (BOOL)isOnWeek {
+    return (self.second - NSDate.new.second) <= (60 * 60 * 24 * 7);
 }
 
 - (BOOL)isYesterday {
     NSDate *added = [self dateByAddingDays:1];
-    return [added isToday];
+    return added.isToday;
 }
 
 - (BOOL)isLastMonth {
@@ -195,6 +194,25 @@
     return [formatter stringFromDate:self];
 }
 
+- (NSString *)weekString {
+    return [self cherater:self.weekday];
+}
+
+- (NSString *)cherater:(NSInteger)inte {
+    NSString *day;
+    switch (inte) {
+        case 1: day = @"星期日"; break;
+        case 2: day = @"星期一"; break;
+        case 3: day = @"星期二"; break;
+        case 4: day = @"星期三"; break;
+        case 5: day = @"星期四"; break;
+        case 6: day = @"星期五"; break;
+        case 7: day = @"星期六"; break;
+        default: break;
+    }
+    return day;
+}
+
 + (NSDate *)currentTimesTamp {
     return [self dateWithTimeIntervalSinceNow:0];
 }
@@ -218,16 +236,16 @@
     return NO;
 }
 
-// 生成当天的某个点，如hour为“8”，就是上午8:00（本地时间）
+
 + (NSDate *)getCustomDateWithHour:(float)hour {
-    //获取当前时间
+    
     NSDate *currentDate = [NSDate date];
     NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
     NSDateComponents *currentComps = [[NSDateComponents alloc] init];
     
     NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     currentComps = [currentCalendar components:unitFlags fromDate:currentDate];
-    //设置当天的某个点
+    
     NSDateComponents *resultComps = [[NSDateComponents alloc] init];
     [resultComps setYear:[currentComps year]];
     [resultComps setMonth:[currentComps month]];

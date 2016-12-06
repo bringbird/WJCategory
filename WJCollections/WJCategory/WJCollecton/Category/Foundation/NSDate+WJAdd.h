@@ -26,7 +26,7 @@
 @property (nonatomic, readonly) BOOL isLeapYear;    ///< 是否是闰年
 @property (nonatomic, readonly) BOOL isToday;       ///< 是否是今天
 @property (nonatomic, readonly) BOOL isYesterday;   ///< 是否是昨天
-@property (nonatomic, readonly) BOOL isThisWeek;    ///< 是否是这个星期
+@property (nonatomic, readonly) BOOL isOnWeek;      ///< 是否在一周内
 @property (nonatomic, readonly) BOOL isLastMonth;   ///< 是否是上个月
 @property (nonatomic, readonly) BOOL isThisMonth;   ///< 是否是这个月
 @property (nonatomic, readonly) BOOL isNextMonth;   ///< 是否是下个月
@@ -66,6 +66,9 @@
 
 /// 时间转时间字符串，format：时间格式
 - (NSString *)stringWithFormat:(NSString *)format;
+
+/// 星期日~星期六(1~7)
+- (NSString *)weekString;
 
 /// 当前时间戳
 + (NSDate *)currentTimesTamp;
