@@ -19,7 +19,7 @@ static inline double systemVersion() {
         version = [UIDevice currentDevice].systemVersion.doubleValue;
     });
     return version;
-}
+} 
 
 @implementation WJAuthorizeTool
 

@@ -55,4 +55,5 @@ typedef NS_OPTIONS(NSUInteger, AuthorizedStatu) {
 
 /// 获取定位权限状态
 + (AuthorizedStatu)getLocationStatus;
+
 @end
