@@ -11,16 +11,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 
-/// 系统版本
-static inline double systemVersion() {
-    static double version;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        version = [UIDevice currentDevice].systemVersion.doubleValue;
-    });
-    return version;
-} 
-
 @implementation WJAuthorizeTool
 
 + (BOOL)isOpenAPNSAuthorized {
@@ -40,23 +30,11 @@ static inline double systemVersion() {
 
 // 检查视频权限
 + (BOOL)isOpenVideoAuthorized {
-    if(systemVersion() >= 7.0) {
-        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-        if (status == AVAuthorizationStatusAuthorized) {
-            return YES;
-        } else return NO;
-    }
-    return NO;
+    return [self getAuthorizedWityMediaType:AVMediaTypeVideo] == AuthorizedStatuAuthorized;
 }
 
 + (BOOL)isOpenAudioAuthorized {
-    if(systemVersion() >= 7.0) {
-        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-        if (status == AVAuthorizationStatusAuthorized) {
-            return YES;
-        } else return NO;
-    }
-    return NO;
+    return [self getAuthorizedWityMediaType:AVMediaTypeAudio] == AuthorizedStatuAuthorized;
 }
 
 + (void)requestAudioAuthorized {
@@ -80,36 +58,33 @@ static inline double systemVersion() {
 }
 
 + (AuthorizedStatu)getAuthorizedWityMediaType:(NSString *)mediatype {
-    __block AuthorizedStatu Astatu;
-    if(systemVersion() >= 7.0) {
-        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:mediatype];
-        switch (status) {
-            case AVAuthorizationStatusNotDetermined: {
-                Astatu = AuthorizedStatuNotDetermined;
-                break;
-            }
-            case AVAuthorizationStatusRestricted: {
-                Astatu = AuthorizedStatuRestricted;
-                break;
-            }
-            case AVAuthorizationStatusDenied: {
-                Astatu = AuthorizedStatuDenied;
-                break;
-            }
-            case AVAuthorizationStatusAuthorized: {
-                Astatu = AuthorizedStatuAuthorized;
-                break;
-            }
+    AuthorizedStatu Astatu;
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:mediatype];
+    switch (status) {
+        case AVAuthorizationStatusNotDetermined: {
+            Astatu = AuthorizedStatuNotDetermined;
+            break;
+        }
+        case AVAuthorizationStatusRestricted: {
+            Astatu = AuthorizedStatuRestricted;
+            break;
+        }
+        case AVAuthorizationStatusDenied: {
+            Astatu = AuthorizedStatuDenied;
+            break;
+        }
+        case AVAuthorizationStatusAuthorized: {
+            Astatu = AuthorizedStatuAuthorized;
+            break;
         }
     }
     return Astatu;
 }
 
 + (BOOL)isOpenLocationAuthorized {
-    CLAuthorizationStatus statu = [CLLocationManager authorizationStatus];
-    if (statu == kCLAuthorizationStatusAuthorizedWhenInUse || statu == kCLAuthorizationStatusAuthorizedAlways ) {
-        return YES;
-    } else return NO;
+    AuthorizedStatu status = [self getLocationStatus];
+    if (status == AuthorizedStatuAlways || status == AuthorizedStatuWhenInUse) return YES;
+    return NO;
 }
 
 + (void)requestLocationWhenUse {
