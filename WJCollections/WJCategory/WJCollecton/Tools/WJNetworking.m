@@ -48,15 +48,11 @@
 + (void)GET:(NSString *)URL parameters:(id)parameters success:(successBlock)success failure:(failureBlock)failure {
     [self showActivitevie:YES];
     [[self sessionManager] GET:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-            [self showActivitevie:NO];
-        }
+        [self showActivitevie:NO];
+        success?success(responseObject):nil;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-            [self showActivitevie:NO];
-        }
+        [self showActivitevie:NO];
+        failure?failure(error):nil;
     }];
 }
 
@@ -64,15 +60,11 @@
     [self showActivitevie:YES];
     AFHTTPSessionManager *manager = [self sessionManager];
     [manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-            [self showActivitevie:NO];
-        }
+        [self showActivitevie:NO];
+        success?success(responseObject):nil;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-            [self showActivitevie:NO];
-        }
+        [self showActivitevie:NO];
+        failure?failure(error):nil;
     }];
 }
 
@@ -86,15 +78,11 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         progress ? progress(uploadProgress) : nil;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-            [self showActivitevie:NO];
-        }
+        [self showActivitevie:NO];
+        success?success(responseObject):nil;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-            [self showActivitevie:NO];
-        }
+        [self showActivitevie:NO];
+        failure?failure(error):nil;
     }];
 }
 
@@ -126,8 +114,8 @@
 + (AFHTTPSessionManager *)sessionManager {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    manager.requestSerializer.timeoutInterval = 30.f;// 超时时间
-    manager.responseSerializer = [AFJSONResponseSerializer serializer]; // JSON数据
+    manager.requestSerializer.timeoutInterval = 30.f;
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
     return manager;
 }
