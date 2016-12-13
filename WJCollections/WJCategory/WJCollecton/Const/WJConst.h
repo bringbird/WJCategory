@@ -10,22 +10,19 @@
 #define WJConst_h
 
 #define WJFunc WJLog(@"%s",__func__)
+
 #ifdef DEBUG
-#define WJLog(FORMAT, ...) fprintf(stderr,"[%s %d]:%s\n",\
-[[[NSString stringWithUTF8String:__FILE__] \
-lastPathComponent] UTF8String], __LINE__, \
-[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+    #define WJLog(FORMAT, ...) fprintf(stderr,"[%s %d]:%s\n",\
+        [[[NSString stringWithUTF8String:__FILE__] \
+        lastPathComponent] UTF8String], __LINE__, \
+        [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
-#define WJLog(FORMAT, ...) nil;
+    #define WJLog(FORMAT, ...) nil;
 #endif
 
 
-#define dispatch_async_main_safe(block)\
-if ([NSThread isMainThread]) {\
-block();\
-} else {\
-dispatch_async(dispatch_get_main_queue(), block);\
-}
+#define dispatch_async_main_safe(block) [NSThread isMainThread]?block():dispatch_async(dispatch_get_main_queue(), block);\}
 
+#define end_Editing [self.view  endEditing:YES];
 
 #endif
