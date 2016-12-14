@@ -11,6 +11,7 @@
 @implementation WJTextView
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [self addobser];
 }
 
