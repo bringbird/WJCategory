@@ -139,43 +139,43 @@
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
 }
 
-- (void)cornerType:(WJCornerType)type withCornerRadius:(CGFloat)radius {
+- (void)setCornerRadius:(CGFloat)radius type:(CornerType)type {
     CGSize cornerSize = CGSizeMake(radius, radius);
     UIBezierPath *maskPath;
     switch (type) {
-        case WJCornerType_Top: {
+        case CornerTypeTop: {
             maskPath = [self cornerType:(UIRectCornerTopLeft|UIRectCornerTopRight) rect:cornerSize];
             break;
         }
-        case WJCornerType_Left: {
+        case CornerTypeLeft: {
             maskPath = [self cornerType:(UIRectCornerTopLeft|UIRectCornerBottomLeft) rect:cornerSize];
             break;
         }
-        case WJCornerType_Bottom: {
+        case CornerTypeBottom: {
             maskPath = [self cornerType:(UIRectCornerBottomLeft|UIRectCornerBottomRight) rect:cornerSize];
             break;
         }
-        case WJCornerType_Right: {
+        case CornerTypeRight: {
             maskPath = [self cornerType:(UIRectCornerTopRight|UIRectCornerBottomRight) rect:cornerSize];
             break;
         }
-        case WJCornerType_TopLeft: {
+        case CornerTypeTopLeft: {
             maskPath = [self cornerType:UIRectCornerTopLeft rect:cornerSize];
             break;
         }
-        case WJCornerType_TopRight: {
+        case CornerTypeTopRight: {
             maskPath = [self cornerType:UIRectCornerTopRight rect:cornerSize];
             break;
         }
-        case WJCornerType_BottomLeft: {
+        case CornerTypeBottomLeft: {
             maskPath = [self cornerType:UIRectCornerBottomLeft rect:cornerSize];
             break;
         }
-        case WJCornerType_BottomRight: {
+        case CornerTypeBottomRight: {
             maskPath = [self cornerType:UIRectCornerBottomRight rect:cornerSize];
             break;
         }
-        case WJCornerType_All: {
+        case CornerTypeAll: {
             maskPath = [self cornerType:UIRectCornerAllCorners rect:cornerSize];
             break;
         }

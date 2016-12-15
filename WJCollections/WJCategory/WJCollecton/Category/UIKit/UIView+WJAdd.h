@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 
 /// 圆角类型
-typedef NS_ENUM(NSInteger,WJCornerType) {
-    WJCornerType_Top = 0,       ///<  顶部
-    WJCornerType_Left,          ///<  左边
-    WJCornerType_Bottom,        ///<  底部
-    WJCornerType_Right,         ///<  右边
-    WJCornerType_TopLeft,       ///<  左上
-    WJCornerType_TopRight,      ///<  右上
-    WJCornerType_BottomLeft,    ///<  左下
-    WJCornerType_BottomRight,   ///<  右下
-    WJCornerType_All,           ///<  全部
+typedef NS_ENUM(NSInteger,CornerType) {
+    CornerTypeTop = 0,       ///<  顶部
+    CornerTypeLeft,          ///<  左边
+    CornerTypeBottom,        ///<  底部
+    CornerTypeRight,         ///<  右边
+    CornerTypeTopLeft,       ///<  左上
+    CornerTypeTopRight,      ///<  右上
+    CornerTypeBottomLeft,    ///<  左下
+    CornerTypeBottomRight,   ///<  右下
+    CornerTypeAll,           ///<  全部
 };
 
 /// 屏幕的尺寸
@@ -80,8 +80,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 从 nib 文件加载 View
 + (instancetype)viewFromXib;
 
-/// 设置 View 圆角，type   圆角类型，radius 圆角角度
-- (void)cornerType:(WJCornerType)type withCornerRadius:(CGFloat)radius;
+/// 设置 View 圆角，radius：圆角角度，type：圆角类型
+- (void)setCornerRadius:(CGFloat)radius type:(CornerType)type;
 
 /**
  Create a snapshot image of the complete view hierarchy.
