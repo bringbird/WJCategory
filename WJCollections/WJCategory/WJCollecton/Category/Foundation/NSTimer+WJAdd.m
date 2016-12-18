@@ -17,11 +17,11 @@
     }
 }
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block {
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeat:(BOOL)repeats block:(void (^)(NSTimer *timer))block {
     return [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(execBlock:) userInfo:[block copy] repeats:repeats];
 }
 
-+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block {
++ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)seconds repeat:(BOOL)repeats block:(void (^)(NSTimer *timer))block {
     return [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(execBlock:) userInfo:[block copy] repeats:repeats];
 }
 @end
