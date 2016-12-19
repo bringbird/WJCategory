@@ -174,20 +174,23 @@
     return [self stringByTrimmingCharactersInSet:set];
 }
 
+- (NSString *)appending:(NSString *)appen {
+    return [self stringByAppendingString:appen];
+}
+
 - (NSURL *)url {
     return [NSURL URLWithString:self];
 }
 
-- (BOOL)isMobileNumber {
-    NSString *MOBILE = @"^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$";
-    NSPredicate *regextestMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
-    NSString *CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
-    NSPredicate *regextestCM = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
-    NSString *CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
-    NSPredicate *regextestCU = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
-    NSString *CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
-    NSPredicate *regextestCT = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
-    if (([regextestMobile evaluateWithObject:self] == YES) || ([regextestCM evaluateWithObject:self] == YES) || ([regextestCT evaluateWithObject:self] == YES) || ([regextestCU evaluateWithObject:self] == YES)) return YES; else return NO;
+- (BOOL)isPhoneNumber {
+    NSString *mobile1 = @"^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{5})$";
+    NSPredicate *regextestMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobile1];
+    NSString *mobile2 = @"^\\(?(\\d{3})\\)?[- ]?(\\d{4})[- ]?(\\d{4})$";
+    NSPredicate *regextestCM = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobile2];
+    if (([regextestMobile evaluateWithObject:self] == YES) ||
+        ([regextestCM evaluateWithObject:self] == YES)) {
+        return YES;
+    } else return NO;
 }
 
 - (BOOL)isNotBlank {
@@ -208,12 +211,19 @@
 }
 
 - (BOOL)containsString:(NSString *)string {
-    if (string == nil) return NO;
-    return [self rangeOfString:string].location != NSNotFound;
+    return (string != nil) && ([string length] > 0) && ([self length] >= [string length]) && ([self rangeOfString:string options:NSCaseInsensitiveSearch].location != NSNotFound);
 }
 
-- (int)convert2Int {
-    int strlength = 0;
+- (BOOL)equalsString:(NSString *)str {
+    return (str != nil) && ([self length] == [str length]) && ([self rangeOfString:str options:NSCaseInsensitiveSearch].location == 0);
+}
+
+- (NSString *)removeWhiteSpace {
+    return [[self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] componentsJoinedByString:@""];
+}
+
+- (NSInteger)byteLength {
+    NSInteger strlength = 0;
     char* p = (char *)[self cStringUsingEncoding:NSUnicodeStringEncoding];
     for (int i=0 ; i < [self lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
         if (*p) {

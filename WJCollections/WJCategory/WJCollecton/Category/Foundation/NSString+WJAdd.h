@@ -79,20 +79,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// UUID 字符串
 + (NSString *)stringWithUUID;
 
-/// 是否包含自定的字符串
+/// 是否包含指定的字符串, 忽略大小写
 - (BOOL)containsString:(NSString *)string;
 
-/// 是否是手机号码
-- (BOOL)isMobileNumber;
+/// 字符串是否相同，忽略大小写
+- (BOOL)equalsString:(NSString *)str;
 
-/// 字符串是否为空(nil, @"", @"  ", @"\n")
+/// 是否是手机号码
+- (BOOL)isPhoneNumber;
+
+/// 字符串是否为空(nil, @"", @"　", @"\n")
 - (BOOL)isNotBlank;
 
 /// 正则匹配，regex：正则表达式，options：匹配方式
 - (BOOL)matchesRegex:(NSString *)regex options:(NSRegularExpressionOptions)options;
 
 /// 获取指定字符串的字节长度
-- (int)convert2Int;
+- (NSInteger)byteLength;
 
 /// 将 ‘UTF32Char’ 字符数组转成 ’NSString‘ ，length：数组长度
 + (NSString *)stringWithUTF32Chars:(const UTF32Char *)char32 length:(NSUInteger)length;
@@ -101,14 +104,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)stringWithUTF32Char:(UTF32Char)char32;
 
 /// 删除字符串头部或尾部的空白和换行符
-/// 例：@"  str  " @"\n str \n" -> @"str"
 - (NSString *)stringByTrim;
+
+/// 删除字符串中所有空白
+- (NSString *)removeWhiteSpace;
 
 /// string 转 URL
 - (NSURL *)url;
 
 /// 时间转时间戳
 - (NSString *)date2Timestamp;
+
+/// 字符串拼接
+- (NSString *)appending:(NSString *)appen;
 
 /// 字符串转日期，format：日期格式
 - (NSDate *)string2dateWithFromat:(NSString *)format;
