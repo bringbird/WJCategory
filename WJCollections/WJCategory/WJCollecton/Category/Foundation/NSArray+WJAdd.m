@@ -74,18 +74,51 @@
     }
     return nil;
 }
-- (NSString *)descriptionWithLocale:(id)locale {
+
+- (NSString *)stringEncoded {
+    if(self == nil || self.count == 0) return nil;
     NSMutableString *str = [NSMutableString string];
-    [str appendString:@"[\n"];
+    [str appendFormat:@"["];
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [str appendFormat:@"%@,\n", obj];
+        [str appendFormat:@"\"%@\",",obj];
     }];
     [str appendString:@"]"];
-    NSRange range = [str rangeOfString:@"," options:NSBackwardsSearch];
-    if (range.length != 0) {
-        [str deleteCharactersInRange:range];
-    }
     return str;
+}
+
+- (NSString *)stringPrettyEncoded {
+    if(self == nil || self.count == 0) return nil;
+    NSMutableString *str = [NSMutableString string];
+    [str appendFormat:@"[\n"];
+    for (NSUInteger i = 0, max = self.count; i < max; i++) {
+        [str appendString:@"    "];
+        [str appendFormat:@"\"%@\"",self[i]];
+        [str appendString:(i + 1 == max) ? @"\n" : @",\n"];
+    }
+    [str appendString:@"]"];
+    return str;
+}
+
+- (NSArray *)intersectionWithArray:(NSArray *)otherArray {
+    NSMutableArray *intersectionArray = [NSMutableArray array];
+    if(self.count == 0) return nil;
+    if(otherArray == nil) return nil;
+    for (id obj in self) {
+        if(![otherArray containsObject:obj]) continue;
+        [intersectionArray addObject:obj];
+    }
+    return intersectionArray;
+}
+
+- (NSArray *)differenSetWithArray:(NSArray *)otherArray {
+    if(self == nil) return nil;
+    if(otherArray == nil) return self;
+    NSMutableArray *minusArray = [NSMutableArray arrayWithArray:self];
+    for (id obj in otherArray) {
+        if(![self containsObject:obj]) continue;
+        [minusArray removeObject:obj];
+    }
+    return minusArray;
 }
 @end
 

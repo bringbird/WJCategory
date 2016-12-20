@@ -36,6 +36,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 将数组转成 json 字符串，字段之间会换行
 - (nullable NSString *)jsonPrettyStringEncoded;
+
+/// 将数组转成字符串，字段之间不会换行
+- (nullable NSString *)stringEncoded;
+
+/// 将数组转成字符串，字段之间会换行
+- (nullable NSString *)stringPrettyEncoded;
+
+/// 数组交集
+- (nullable NSArray *)intersectionWithArray:(NSArray *)otherArray;
+
+/// 数组差集
+- (nullable NSArray *)differenSetWithArray:(NSArray *)otherArray;
+
 @end
 
 @interface NSMutableArray (WJAdd)

@@ -34,6 +34,12 @@
 @property (nonatomic, readonly) BOOL isThisYear;    ///< 是否是今年
 @property (nonatomic, readonly) BOOL isNextYear;    ///< 是否是明年
 
+/// 星期日~星期六(1~7)
+- (NSString *)weekString;
+
+/// 当前时间戳
++ (NSDate *)currentTimesTamp;
+
 /// 是否是当天指定的时间段内
 + (BOOL)isBetweenFromHour:(float)fromHour toHour:(float)toHour;
 
@@ -58,22 +64,16 @@
 /// 指定日期加上秒
 - (NSDate *)dateByAddingSeconds:(NSInteger)seconds;
 
-/// 时间字符串转时间，frmat：时间格式
-+ (NSDate *)dateWithString:(NSString *)dateString format:(NSString *)format;
-
-/// 时间字符串转时间，frmat：时间格式 timeZone：时区，locale：地区
-+ (NSDate *)dateWithString:(NSString *)dateString format:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale;
-
 /// 时间转时间字符串，format：时间格式
 - (NSString *)stringWithFormat:(NSString *)format;
 
-/// 星期日~星期六(1~7)
-- (NSString *)weekString;
-
-/// 当前时间戳
-+ (NSDate *)currentTimesTamp;
+/// 时间字符串转时间，frmat：时间格式
++ (NSDate *)dateWithString:(NSString *)dateString format:(NSString *)format;
 
 /// 时间转时间字符串，format：时间格式 timeZone：时区，locale：地区
 - (NSString *)stringWithFormat:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale;
+
+/// 时间字符串转时间，frmat：时间格式 timeZone：时区，locale：地区
++ (NSDate *)dateWithString:(NSString *)dateString format:(NSString *)format timeZone:(NSTimeZone *)timeZone locale:(NSLocale *)locale;
 
 @end
