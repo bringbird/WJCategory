@@ -11,9 +11,6 @@
 		6B1E51E51D6A4580003C979F /* NSData+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51D01D6A457F003C979F /* NSData+WJAdd.m */; };
 		6B1E51E61D6A4580003C979F /* NSDate+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51D21D6A457F003C979F /* NSDate+WJAdd.m */; };
 		6B1E51E71D6A4580003C979F /* NSString+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51D41D6A457F003C979F /* NSString+WJAdd.m */; };
-		6B1E51E81D6A4580003C979F /* MBProgressHUD+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51D71D6A457F003C979F /* MBProgressHUD+WJAdd.m */; };
-		6B1E51E91D6A4580003C979F /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B1E51D81D6A457F003C979F /* MBProgressHUD.bundle */; };
-		6B1E51EA1D6A4580003C979F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51DA1D6A457F003C979F /* MBProgressHUD.m */; };
 		6B1E51EB1D6A4580003C979F /* UIBarButtonItem+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51DC1D6A457F003C979F /* UIBarButtonItem+WJAdd.m */; };
 		6B1E51EC1D6A4580003C979F /* UIColor+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51DE1D6A457F003C979F /* UIColor+WJAdd.m */; };
 		6B1E51ED1D6A4580003C979F /* UIImage+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E51E01D6A457F003C979F /* UIImage+WJAdd.m */; };
@@ -45,7 +42,8 @@
 		6B91892E1D6A887400824666 /* UIDevice+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B91892D1D6A887400824666 /* UIDevice+WJAdd.m */; };
 		6BA14DB91D6E09F800ED980F /* UIScreen+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA14DB81D6E09F800ED980F /* UIScreen+WJAdd.m */; };
 		6BAB43561D6B2CE00006CA85 /* NSTimer+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB43551D6B2CE00006CA85 /* NSTimer+WJAdd.m */; };
-		6BD7E3781D71090800C9076C /* WJPermissionsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7E3771D71090800C9076C /* WJPermissionsTool.m */; };
+		6E2987011DF06F6F000CDEF2 /* WJAuthorizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2987001DF06F6F000CDEF2 /* WJAuthorizeTool.m */; };
+		6EBEF7B51DFD5EE500FE10AF /* NSObject+WJAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEF7B41DFD5EE500FE10AF /* NSObject+WJAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,11 +54,6 @@
 		6B1E51D21D6A457F003C979F /* NSDate+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WJAdd.m"; sourceTree = "<group>"; };
 		6B1E51D31D6A457F003C979F /* NSString+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WJAdd.h"; sourceTree = "<group>"; };
 		6B1E51D41D6A457F003C979F /* NSString+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WJAdd.m"; sourceTree = "<group>"; };
-		6B1E51D61D6A457F003C979F /* MBProgressHUD+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WJAdd.h"; sourceTree = "<group>"; };
-		6B1E51D71D6A457F003C979F /* MBProgressHUD+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+WJAdd.m"; sourceTree = "<group>"; };
-		6B1E51D81D6A457F003C979F /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
-		6B1E51D91D6A457F003C979F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		6B1E51DA1D6A457F003C979F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6B1E51DB1D6A457F003C979F /* UIBarButtonItem+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WJAdd.h"; sourceTree = "<group>"; };
 		6B1E51DC1D6A457F003C979F /* UIBarButtonItem+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WJAdd.m"; sourceTree = "<group>"; };
 		6B1E51DD1D6A457F003C979F /* UIColor+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WJAdd.h"; sourceTree = "<group>"; };
@@ -124,8 +117,10 @@
 		6BA14DB81D6E09F800ED980F /* UIScreen+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WJAdd.m"; sourceTree = "<group>"; };
 		6BAB43541D6B2CE00006CA85 /* NSTimer+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WJAdd.h"; sourceTree = "<group>"; };
 		6BAB43551D6B2CE00006CA85 /* NSTimer+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WJAdd.m"; sourceTree = "<group>"; };
-		6BD7E3761D71090800C9076C /* WJPermissionsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPermissionsTool.h; sourceTree = "<group>"; };
-		6BD7E3771D71090800C9076C /* WJPermissionsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPermissionsTool.m; sourceTree = "<group>"; };
+		6E2986FF1DF06F6F000CDEF2 /* WJAuthorizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJAuthorizeTool.h; sourceTree = "<group>"; };
+		6E2987001DF06F6F000CDEF2 /* WJAuthorizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJAuthorizeTool.m; sourceTree = "<group>"; };
+		6EBEF7B31DFD5EE500FE10AF /* NSObject+WJAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WJAdd.h"; sourceTree = "<group>"; };
+		6EBEF7B41DFD5EE500FE10AF /* NSObject+WJAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WJAdd.m"; sourceTree = "<group>"; };
 		E4FD1D7011BB92492529A510 /* Pods-WJCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJCategory.release.xcconfig"; path = "Pods/Target Support Files/Pods-WJCategory/Pods-WJCategory.release.xcconfig"; sourceTree = "<group>"; };
 		E8D86DC17FDFCDDBCB7016CF /* Pods-WJCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJCategory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WJCategory/Pods-WJCategory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +163,8 @@
 				6B9189271D6A7AC400824666 /* NSNotificationCenter+WJAdd.m */,
 				6BAB43541D6B2CE00006CA85 /* NSTimer+WJAdd.h */,
 				6BAB43551D6B2CE00006CA85 /* NSTimer+WJAdd.m */,
+				6EBEF7B31DFD5EE500FE10AF /* NSObject+WJAdd.h */,
+				6EBEF7B41DFD5EE500FE10AF /* NSObject+WJAdd.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -175,11 +172,6 @@
 		6B1E51D51D6A457F003C979F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				6B1E51D81D6A457F003C979F /* MBProgressHUD.bundle */,
-				6B1E51D61D6A457F003C979F /* MBProgressHUD+WJAdd.h */,
-				6B1E51D71D6A457F003C979F /* MBProgressHUD+WJAdd.m */,
-				6B1E51D91D6A457F003C979F /* MBProgressHUD.h */,
-				6B1E51DA1D6A457F003C979F /* MBProgressHUD.m */,
 				6B1E51DB1D6A457F003C979F /* UIBarButtonItem+WJAdd.h */,
 				6B1E51DC1D6A457F003C979F /* UIBarButtonItem+WJAdd.m */,
 				6B1E51DD1D6A457F003C979F /* UIColor+WJAdd.h */,
@@ -237,8 +229,8 @@
 				6B7D3E931D7B98E9005171C6 /* WJDataTool.m */,
 				6B5BFE641D68FD7800E3251A /* WJNetworking.h */,
 				6B5BFE651D68FD7800E3251A /* WJNetworking.m */,
-				6BD7E3761D71090800C9076C /* WJPermissionsTool.h */,
-				6BD7E3771D71090800C9076C /* WJPermissionsTool.m */,
+				6E2986FF1DF06F6F000CDEF2 /* WJAuthorizeTool.h */,
+				6E2987001DF06F6F000CDEF2 /* WJAuthorizeTool.m */,
 				6B82C3721DBC39B200CA6760 /* WJTimer.h */,
 				6B82C3731DBC39B200CA6760 /* WJTimer.m */,
 				6B82C3751DBC3DEA00CA6760 /* WJHUD.h */,
@@ -361,7 +353,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WJ;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "韦明杰";
 				TargetAttributes = {
 					6B8B27FE1D68AB65006331FB = {
@@ -393,7 +385,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8B28121D68AB66006331FB /* LaunchScreen.storyboard in Resources */,
-				6B1E51E91D6A4580003C979F /* MBProgressHUD.bundle in Resources */,
 				6B8B280F1D68AB66006331FB /* Assets.xcassets in Resources */,
 				6B8B280D1D68AB66006331FB /* Main.storyboard in Resources */,
 			);
@@ -429,7 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D28A73ACB56C799D03185205 /* [CP] Copy Pods Resources */ = {
@@ -457,7 +448,6 @@
 				6B7D3E941D7B98E9005171C6 /* WJDataTool.m in Sources */,
 				6B80179A1D6DF7B500866A80 /* UIControl+WJAdd.m in Sources */,
 				6B9189251D6A6E1700824666 /* CALayer+WJAdd.m in Sources */,
-				6BD7E3781D71090800C9076C /* WJPermissionsTool.m in Sources */,
 				6B1E51EE1D6A4580003C979F /* UIImageView+WJAdd.m in Sources */,
 				6B1E51ED1D6A4580003C979F /* UIImage+WJAdd.m in Sources */,
 				6B82C3741DBC39B200CA6760 /* WJTimer.m in Sources */,
@@ -466,18 +456,18 @@
 				6B9189281D6A7AC400824666 /* NSNotificationCenter+WJAdd.m in Sources */,
 				6B80179D1D6DF95A00866A80 /* UIGestureRecognizer+WJAdd.m in Sources */,
 				6B5BFE631D68FB6600E3251A /* WJTextView.m in Sources */,
-				6B1E51E81D6A4580003C979F /* MBProgressHUD+WJAdd.m in Sources */,
 				6B1E51F21D6A4AC5003C979F /* NSArray+WJAdd.m in Sources */,
 				6BAB43561D6B2CE00006CA85 /* NSTimer+WJAdd.m in Sources */,
+				6E2987011DF06F6F000CDEF2 /* WJAuthorizeTool.m in Sources */,
 				6B7D3E8B1D7B8AB9005171C6 /* WJMoveView.m in Sources */,
 				6B8017A31D6DFBD600866A80 /* UITableView+WJAdd.m in Sources */,
+				6EBEF7B51DFD5EE500FE10AF /* NSObject+WJAdd.m in Sources */,
 				6B8017A01D6DFB9000866A80 /* UIScrollView+WJAdd.m in Sources */,
 				6BA14DB91D6E09F800ED980F /* UIScreen+WJAdd.m in Sources */,
 				6B1E51E71D6A4580003C979F /* NSString+WJAdd.m in Sources */,
 				6B91892E1D6A887400824666 /* UIDevice+WJAdd.m in Sources */,
 				6B82C3771DBC3DEA00CA6760 /* WJHUD.m in Sources */,
 				6B1E51EF1D6A4580003C979F /* UIView+WJAdd.m in Sources */,
-				6B1E51EA1D6A4580003C979F /* MBProgressHUD.m in Sources */,
 				6B82C37A1DBC3EC300CA6760 /* WJImagePicker.m in Sources */,
 				6B8B281F1D68AB9C006331FB /* ViewController.m in Sources */,
 				6B8B281E1D68AB9C006331FB /* AppDelegate.m in Sources */,
@@ -526,8 +516,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -569,8 +561,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
