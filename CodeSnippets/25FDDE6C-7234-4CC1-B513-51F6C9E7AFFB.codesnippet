@@ -9,13 +9,15 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - &lt;#gmark#&gt;</string>
+	<string>#pragma mark - &lt;#description#&gt; </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>25FDDE6C-7234-4CC1-B513-51F6C9E7AFFB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>pragma mark</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>pragma</string>
 	<key>IDECodeSnippetUserSnippet</key>

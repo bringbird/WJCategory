@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[NSNotificationCenter defaultCenter]</string>
+	<string>NSNotificationCenter.defaultCenter</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7D057FBD-B35E-4AA4-94A0-9ACB77356696</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>通知中心</string>
+	<string>Notification Center</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>NotificationCenter</string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -9,8 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt;
-@property (nonatomic, weak) &lt;#class#&gt; *&lt;#object#&gt;</string>
+	<string>@property (nonatomic, weak) &lt;#class#&gt; *&lt;#object#&gt; ///&lt; &lt;#description#&gt; </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A3554C56-8C90-40BA-BF02-9CD1D0BA5CC9</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -18,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>weak 属性</string>
+	<string>weak property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property weak</string>
 	<key>IDECodeSnippetUserSnippet</key>

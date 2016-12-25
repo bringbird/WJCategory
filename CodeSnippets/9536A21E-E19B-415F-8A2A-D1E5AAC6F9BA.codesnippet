@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[UIApplication sharedApplication]</string>
+	<string>UIApplication.sharedApplication</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9536A21E-E19B-415F-8A2A-D1E5AAC6F9BA</string>
 	<key>IDECodeSnippetLanguage</key>

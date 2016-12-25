@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>- &lt;#name#&gt; {
  if (!_&lt;#pname#&gt;) {
- self.&lt;#pname#&gt; = [[&lt;#class#&gt; alloc]init];
+ _&lt;#pname#&gt; = [[&lt;#class#&gt; alloc]init];
  }
  return _&lt;#pname#&gt;;
  }</string>
@@ -22,7 +22,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>懒加载属性</string>
+	<string>lazy load property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>lazy load</string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>强引用</string>
+	<string>strong circle</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>strongSelf</string>
 	<key>IDECodeSnippetUserSnippet</key>

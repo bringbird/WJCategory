@@ -19,7 +19,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>GCD global 函数</string>
+	<string>GCD Global Method</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>GlobalGCD</string>
 	<key>IDECodeSnippetUserSnippet</key>

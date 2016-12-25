@@ -3,26 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>onceToken</string>
+	<string>Multiplechoice</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static dispatch_once_t onceToken;
- dispatch_once(&amp;onceToken, ^{
-  &lt;#code to be executed once#&gt;
- });</string>
+	<string>if (_selectedtampButton == nil){
+        sender.selected = YES;
+        _selectedtampButton = sender;
+    } else if (_selectedtampButton != nil &amp;&amp; _selectedtampButton == sender){
+        sender.selected = YES;
+    } else if (_selectedtampButton != sender &amp;&amp; _selectedtampButton != nil){
+        _selectedtampButton.selected = NO;
+        sender.selected = YES;
+        _selectedtampButton = sender;
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7D93543C-B2A8-4881-95BF-9648B811AA2C</string>
+	<string>0B762E31-971D-49E8-9251-6E45602C1A7C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>GCD onceToken</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>onceToken</string>
+	<string>Multiple Choice</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

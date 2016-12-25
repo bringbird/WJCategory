@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,weak) id&lt;&lt;#protocol#&gt;&gt; &lt;#delegate#&gt;;</string>
+	<string>@property (nonatomic,weak) id&lt;&lt;#protocol#&gt;&gt; delegate; ///&lt; &lt;#description#&gt; </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>83342795-77B3-44A6-B3A5-136C5FCF2A7C</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>delegate 属性</string>
+	<string>delegate property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property delegate</string>
 	<key>IDECodeSnippetUserSnippet</key>

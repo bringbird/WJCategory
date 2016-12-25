@@ -19,6 +19,8 @@
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>view Did Load</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>viewDidLoad</string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -9,8 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt; 
-@property (nonatomic, strong) &lt;#name#&gt; *&lt;#name#&gt;</string>
+	<string>@property (nonatomic, strong) &lt;#name#&gt; *&lt;#name#&gt; ///&lt; &lt;#description#&gt; </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C2A7162F-0CF8-4108-9296-118774C5C44A</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -18,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strong 属性</string>
+	<string>strong property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property strong</string>
 	<key>IDECodeSnippetUserSnippet</key>

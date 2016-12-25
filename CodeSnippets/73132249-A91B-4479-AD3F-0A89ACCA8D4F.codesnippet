@@ -20,7 +20,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>视图已经出现</string>
+	<string>view Did Appear</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>viewDidAppear</string>
 	<key>IDECodeSnippetUserSnippet</key>

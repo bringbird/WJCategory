@@ -3,26 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>onceToken</string>
+	<string>remakeConstraints</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static dispatch_once_t onceToken;
- dispatch_once(&amp;onceToken, ^{
-  &lt;#code to be executed once#&gt;
- });</string>
+	<string>[&lt;#view#&gt; mas_remakeConstraints:^(MASConstraintMaker *make) {
+        &lt;#code#&gt;
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7D93543C-B2A8-4881-95BF-9648B811AA2C</string>
+	<string>4B6D353C-DD7E-414D-A522-CBDF3DCF3873</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>GCD onceToken</string>
+	<string>remakeConstraints</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>onceToken</string>
+	<string>Masonry</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

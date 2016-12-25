@@ -20,7 +20,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>消除过期警告</string>
+	<string>Clear Declarations API Warning</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>declarations</string>
 	<key>IDECodeSnippetUserSnippet</key>
