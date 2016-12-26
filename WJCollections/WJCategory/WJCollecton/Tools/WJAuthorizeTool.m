@@ -10,6 +10,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
+
+static inline double systemVersion() {
+    static double version;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        version = [UIDevice currentDevice].systemVersion.doubleValue;
+    });
+    return version;
+}
 
 @implementation WJAuthorizeTool
 
@@ -20,21 +30,35 @@
 }
 
 + (void)requestAPNSAuthorized {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
         UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
+#pragma clang diagnostic pop
 }
 
-// 检查视频权限
-+ (BOOL)isOpenVideoAuthorized {
-    return [self getAuthorizedWityMediaType:AVMediaTypeVideo] == AuthorizedStatuAuthorized;
++ (BOOL)isOpenCameraAuthorized {
+    if(systemVersion() >= 7.0) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        if (status == AVAuthorizationStatusAuthorized) {
+            return YES;
+        } else return NO;
+    }
+    return NO;
 }
 
 + (BOOL)isOpenAudioAuthorized {
-    return [self getAuthorizedWityMediaType:AVMediaTypeAudio] == AuthorizedStatuAuthorized;
+    if(systemVersion() >= 7.0) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+        if (status == AVAuthorizationStatusAuthorized) {
+            return YES;
+        } else return NO;
+    }
+    return NO;
 }
 
 + (void)requestAudioAuthorized {
@@ -45,7 +69,7 @@
     return [self getAuthorizedWityMediaType:AVMediaTypeAudio];
 }
 
-+ (void)requestVideoAuthorized {
++ (void)requestCameraAuthorized {
     [self requestMedia:AVMediaTypeVideo];
 }
 
@@ -53,38 +77,73 @@
     [AVCaptureDevice requestAccessForMediaType:media completionHandler:nil];
 }
 
-+ (AuthorizedStatu)getVideoAuthorized {
++ (AuthorizedStatu)getCameraAuthorized {
     return [self getAuthorizedWityMediaType:AVMediaTypeVideo];
 }
 
 + (AuthorizedStatu)getAuthorizedWityMediaType:(NSString *)mediatype {
-    AuthorizedStatu Astatu;
-    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:mediatype];
-    switch (status) {
-        case AVAuthorizationStatusNotDetermined: {
-            Astatu = AuthorizedStatuNotDetermined;
-            break;
-        }
-        case AVAuthorizationStatusRestricted: {
-            Astatu = AuthorizedStatuRestricted;
-            break;
-        }
-        case AVAuthorizationStatusDenied: {
-            Astatu = AuthorizedStatuDenied;
-            break;
-        }
-        case AVAuthorizationStatusAuthorized: {
-            Astatu = AuthorizedStatuAuthorized;
-            break;
+    __block AuthorizedStatu Astatu;
+    if(systemVersion() >= 7.0) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:mediatype];
+        switch (status) {
+            case AVAuthorizationStatusNotDetermined: {
+                Astatu = AuthorizedStatuNotDetermined;
+                break;
+            }
+            case AVAuthorizationStatusRestricted: {
+                Astatu = AuthorizedStatuRestricted;
+                break;
+            }
+            case AVAuthorizationStatusDenied: {
+                Astatu = AuthorizedStatuDenied;
+                break;
+            }
+            case AVAuthorizationStatusAuthorized: {
+                Astatu = AuthorizedStatuAuthorized;
+                break;
+            }
         }
     }
     return Astatu;
 }
 
-+ (BOOL)isOpenLocationAuthorized {
-    AuthorizedStatu status = [self getLocationStatus];
-    if (status == AuthorizedStatuAlways || status == AuthorizedStatuWhenInUse) return YES;
++ (BOOL)isOpenPhotoAuthorized {
+    AuthorizedStatu status = [WJAuthorizeTool getPhotoAuthorized];
+    if (status == AuthorizedStatuAuthorized) return YES;
     return NO;
+}
+
++ (void)requestPhotoAuthorized {
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        
+    }];
+}
+
++ (AuthorizedStatu)getPhotoAuthorized {
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    AuthorizedStatu author;
+    switch (status) {
+        case PHAuthorizationStatusNotDetermined:
+            author = AuthorizedStatuNotDetermined;
+            break;
+        case PHAuthorizationStatusRestricted:
+            author = AuthorizedStatuRestricted;
+            break;
+        case PHAuthorizationStatusDenied:
+            author = AuthorizedStatuDenied;
+            break;
+        case PHAuthorizationStatusAuthorized:
+            author = AuthorizedStatuAuthorized;
+            break;
+    }
+    return author;
+}
+
++ (BOOL)isOpenLocationAuthorized {
+    CLAuthorizationStatus statu = [CLLocationManager authorizationStatus];
+    if (statu == kCLAuthorizationStatusAuthorizedWhenInUse || statu == kCLAuthorizationStatusAuthorizedAlways ) {
+        return YES;
+    } else return NO;
 }
 
 + (void)requestLocationWhenUse {
@@ -114,7 +173,8 @@
         case kCLAuthorizationStatusNotDetermined:
             Astatu =  AuthorizedStatuNotDetermined;
             break;
-        default: break;
+        default:
+            break;
     }
     return Astatu;
 }

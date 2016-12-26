@@ -8,25 +8,38 @@
 
 #import <Foundation/Foundation.h>
 
-@class WJTimer;
+NS_ASSUME_NONNULL_BEGIN
 
-@protocol WJTimerDelegate <NSObject>
-
-@required
-
-/// 计时器重复执行代理方法  timer:WJTimer
-- (void)onTimerFire:(WJTimer *)timer;
-
-@end
-
+/**
+ WJTimer is a thread-safe timer based on GCD. It has similar API with `NSTimer`.
+ WJTimer object differ from NSTimer in a few ways:
+ 
+ * It use GCD to produce timer tick, and won't be affected by runLoop.
+ * It make a weak reference to the target, so it can avoid retain cycles.
+ * It always fire on main thread.
+ 
+ */
 @interface WJTimer : NSObject
 
-@property (nonatomic,weak) id<WJTimerDelegate> delegate;
++ (WJTimer *)timerWithTimeInterval:(NSTimeInterval)interval
+                            target:(id)target
+                          selector:(SEL)selector
+                           repeats:(BOOL)repeats;
 
-/// 开启计时器 seconds:重复间隔  delegate:计时器代理  repeat:是否重复执行代理方法
-- (void)startTimer:(NSTimeInterval)seconds delegate:(id<WJTimerDelegate>)delegate repeats:(BOOL)repeats;
+- (instancetype)initWithFireTime:(NSTimeInterval)start
+                        interval:(NSTimeInterval)interval
+                          target:(id)target
+                        selector:(SEL)selector
+                         repeats:(BOOL)repeats NS_DESIGNATED_INITIALIZER;
 
-/// 停止并销毁计时器
-- (void)stopTimer;
+@property (readonly) BOOL repeats;
+@property (readonly) NSTimeInterval timeInterval;
+@property (readonly, getter=isValid) BOOL valid;
+
+- (void)invalidate;
+
+- (void)fire;
 
 @end
+
+NS_ASSUME_NONNULL_END

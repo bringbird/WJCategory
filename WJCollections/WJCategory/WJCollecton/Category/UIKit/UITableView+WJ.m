@@ -1,14 +1,14 @@
 //
-//  UITableView+WJAdd.m
+//  UITableView+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/24.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UITableView+WJAdd.h"
+#import "UITableView+WJ.h"
 
-@implementation UITableView (WJAdd)
+@implementation UITableView (WJ)
 
 - (void)updateWithBlock:(void (^)(UITableView *tableView))block {
     [self beginUpdates];

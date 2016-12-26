@@ -1,5 +1,5 @@
 //
-//  UIView+WJAdd.h
+//  UIView+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/20.
@@ -21,44 +21,9 @@ typedef NS_ENUM(NSInteger,CornerType) {
     CornerTypeAll,           ///<  全部
 };
 
-/// 屏幕的尺寸
-static inline CGSize  screenSize() {
-    static CGSize size;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        size = [UIScreen mainScreen].bounds.size;
-        if (size.height < size.width) {
-            CGFloat tmp = size.height;
-            size.height = size.width;
-            size.width = tmp;
-        }
-    });
-    return size;
-}
-
-/// 屏幕的高
-static inline CGFloat screenHeight() {
-    static CGFloat height;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        height = screenSize().height;
-    });
-    return height;
-}
-
-/// 屏幕的宽
-static inline CGFloat screenWidth() {
-    static CGFloat width;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        width = screenSize().width;
-    });
-    return width;
-}
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (WJAdd)
+@interface UIView (WJ)
 
 @property (nonatomic) CGFloat left;
 @property (nonatomic) CGFloat top;
@@ -78,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) CGFloat visibleAlpha;
 
 /// 从 nib 文件加载 View
-+ (instancetype)viewFromXib;
++ (UIView *)viewFromXib;
 
 /// 设置 View 圆角，radius：圆角角度，type：圆角类型
 - (void)setCornerRadius:(CGFloat)radius type:(CornerType)type;

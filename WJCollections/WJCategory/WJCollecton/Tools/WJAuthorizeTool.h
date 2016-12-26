@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 typedef NS_OPTIONS(NSUInteger, AuthorizedStatu) {
     AuthorizedStatuAuthorized    = 1, ///< 明确授予权限
     AuthorizedStatuDenied        = 2, ///< 明确拒绝权限
@@ -17,43 +16,54 @@ typedef NS_OPTIONS(NSUInteger, AuthorizedStatu) {
     AuthorizedStatuAlways        = 6  ///< 总是允许访问
 };
 
-/// 系统权限监测工具
+/** System permissions detection tools */
 @interface WJAuthorizeTool : NSObject
 
 /// 是否开启摄像机权限
-+ (BOOL)isOpenVideoAuthorized;
++ (BOOL)isOpenCameraAuthorized;
 
-/// 注册相机权限 
-+ (void)requestVideoAuthorized;
+/** Registered camera permissions. */
++ (void)requestCameraAuthorized;
 
-/// 获取相机权限状态
-+ (AuthorizedStatu)getVideoAuthorized;
+/** Get camera authority status. */
++ (AuthorizedStatu)getCameraAuthorized;
+
+/// 是否开启相册权限
++ (BOOL)isOpenPhotoAuthorized;
+
+/** Registered album permissions. */
++ (void)requestPhotoAuthorized;
+
+/** Get album authority status. */
++ (AuthorizedStatu)getPhotoAuthorized;
 
 /// 是否开启麦克风权限
 + (BOOL)isOpenAudioAuthorized;
 
-/// 注册麦克风权限
+/** Register the microphone permissions. */
 + (void)requestAudioAuthorized;
 
-/// 获取麦克风权限状态
+/** Get microphone authority status. */
 + (AuthorizedStatu)getAudioAuthorized;
 
 /// 是否开启通知权限
 + (BOOL)isOpenAPNSAuthorized;
 
-/// 注册通知
+/** Register the user notification permissions. */
 + (void)requestAPNSAuthorized;
 
 /// 是否开启定位权限
 + (BOOL)isOpenLocationAuthorized;
 
-/// 注册定位权限
+/** Registered location permissions, When in use. */
 + (void)requestLocationWhenUse;
 
-/// 注册定位权限
+/** Registered location permissions, Always. */
 + (void)requestLocationAlways;
 
-/// 获取定位权限状态
+/** Get locating authority status. */
 + (AuthorizedStatu)getLocationStatus;
 
++ (instancetype)new  UNAVAILABLE_ATTRIBUTE;
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
 @end

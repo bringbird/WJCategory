@@ -7,7 +7,7 @@
 //
 
 #import "WJShareView.h"
-#import "UIView+WJAdd.h"
+#import "UIView+WJ.h"
 
 @interface WJShareView ()
 @property (nonatomic, strong) UIWindow *shareWindow;

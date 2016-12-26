@@ -1,14 +1,14 @@
 //
-//  UIView+WJAdd.m
+//  UIView+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/20.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIView+WJAdd.h"
+#import "UIView+WJ.h"
 
-@implementation UIView (WJAdd)
+@implementation UIView (WJ)
 
 - (CGFloat)left {
     return self.frame.origin.x;
@@ -135,7 +135,7 @@
     return alpha;
 }
 
-+ (instancetype)viewFromXib {
++ (UIView *)viewFromXib {
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
 }
 
