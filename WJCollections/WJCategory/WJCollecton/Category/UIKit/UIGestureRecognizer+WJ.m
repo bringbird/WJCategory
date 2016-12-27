@@ -1,12 +1,12 @@
 //
-//  UIGestureRecognizer+WJAdd.m
+//  UIGestureRecognizer+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/24.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIGestureRecognizer+WJAdd.h"
+#import "UIGestureRecognizer+WJ.h"
 #import <objc/runtime.h>
 
 static const int block_key;
@@ -29,7 +29,7 @@ static const int block_key;
 @end
 
 
-@implementation UIGestureRecognizer (WJAdd)
+@implementation UIGestureRecognizer (WJ)
 - (instancetype)initWithActionBlock:(void (^)(id sender))block {
     self = [self init];
     [self addActionBlock:block];

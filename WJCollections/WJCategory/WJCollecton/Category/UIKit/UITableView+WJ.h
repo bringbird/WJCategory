@@ -1,5 +1,5 @@
 //
-//  UITableView+WJAdd.h
+//  UITableView+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/24.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView (WJAdd)
+@interface UITableView (WJ)
 
 /**
  Perform a series of method calls that insert, delete, or select rows and

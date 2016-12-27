@@ -1,12 +1,12 @@
 //
-//  UIControl+WJAdd.m
+//  UIControl+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/24.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIControl+WJAdd.h"
+#import "UIControl+WJ.h"
 #import <objc/runtime.h>
 
 static const int block_key;
@@ -39,7 +39,7 @@ static const int block_key;
 @end
 
 
-@implementation UIControl (WJAdd)
+@implementation UIControl (WJ)
 - (void)removeAllTargets {
     [[self allTargets] enumerateObjectsUsingBlock: ^(id object, BOOL *stop) {
         [self removeTarget:object action:NULL forControlEvents:UIControlEventAllEvents];

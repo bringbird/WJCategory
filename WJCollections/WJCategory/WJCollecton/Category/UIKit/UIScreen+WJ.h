@@ -1,5 +1,5 @@
 //
-//  UIScreen+WJAdd.h
+//  UIScreen+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/25.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIScreen (WJAdd)
+@interface UIScreen (WJ)
 /**
  Main screen's scale
  

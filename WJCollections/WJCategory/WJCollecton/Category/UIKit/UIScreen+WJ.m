@@ -1,12 +1,12 @@
 //
-//  UIScreen+WJAdd.m
+//  UIScreen+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/25.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIScreen+WJAdd.h"
+#import "UIScreen+WJ.h"
 #include <sys/sysctl.h>
 
 @interface UIDevice (private)
@@ -27,7 +27,7 @@
     return model;
 }
 @end
-@implementation UIScreen (WJAdd)
+@implementation UIScreen (WJ)
 + (CGFloat)screenScale {
     static CGFloat screenScale = 0.0;
     static dispatch_once_t onceToken;

@@ -1,14 +1,14 @@
 //
-//  UIBarButtonItem+WJAdd.m
+//  UIBarButtonItem+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIBarButtonItem+WJAdd.h"
+#import "UIBarButtonItem+WJ.h"
 
-@implementation UIBarButtonItem (WJAdd)
+@implementation UIBarButtonItem (WJ)
 + (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action image:(NSString *)image highlightedImage:(NSString *)highlightedImage {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:target action:action forControlEvents: UIControlEventTouchUpInside];

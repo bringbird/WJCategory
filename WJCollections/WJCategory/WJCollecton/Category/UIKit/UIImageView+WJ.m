@@ -1,16 +1,16 @@
 //
-//  UIImageView+WJAdd.m
+//  UIImageView+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/20.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIImageView+WJAdd.h"
+#import "UIImageView+WJ.h"
 #import <AFNetworking/AFNetworking.h>
 #import <YYWebImage/YYWebImage.h>
 
-@implementation UIImageView (WJAdd)
+@implementation UIImageView (WJ)
 
 - (void)wj_setBigImageWithURL:(NSString *)bigImageURL smallImage:(NSString *)smallImageURL placeholderImage:(UIImage *)placeholderImage completed:(void(^)(UIImage *image, NSURL *url))completedBlock {
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];

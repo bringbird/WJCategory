@@ -1,12 +1,12 @@
 //
-//  UIDevice+WJAdd.m
+//  UIDevice+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIDevice+WJAdd.h"
+#import "UIDevice+WJ.h"
 #include <sys/socket.h>
 #include <sys/sysctl.h>
 #include <net/if.h>
@@ -15,7 +15,7 @@
 #include <arpa/inet.h>
 #include <ifaddrs.h>
 
-@implementation UIDevice (WJAdd)
+@implementation UIDevice (WJ)
 + (double)systemVersion {
     static double version;
     static dispatch_once_t onceToken;

@@ -1,5 +1,5 @@
 //
-//  UIDevice+WJAdd.h
+//  UIDevice+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIDevice (WJAdd)
+@interface UIDevice (WJ)
 
 /// 设备系统版本 (e.g. 8.1)
 + (double)systemVersion;

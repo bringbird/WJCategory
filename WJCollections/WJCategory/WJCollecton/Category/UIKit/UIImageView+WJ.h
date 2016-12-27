@@ -1,5 +1,5 @@
 //
-//  UIImageView+WJAdd.h
+//  UIImageView+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (WJAdd)
+@interface UIImageView (WJ)
 
 /// 大图 小图 占位图 完成回调
 - (void)wj_setBigImageWithURL:(NSString *)bigImageURL smallImage:(NSString *)smallImageURL placeholderImage:(UIImage *)placeholderImage completed:(void(^)(UIImage *image, NSURL *url))completedBlock;

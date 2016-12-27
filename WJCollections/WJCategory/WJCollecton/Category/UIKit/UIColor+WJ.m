@@ -1,12 +1,12 @@
 //
-//  UIColor+WJAdd.m
+//  UIColor+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIColor+WJAdd.h"
+#import "UIColor+WJ.h"
 #define CLAMP_COLOR_VALUE(v) (v) = (v) < 0 ? 0 : (v) > 1 ? 1 : (v)
 
 void RGB2HSL(CGFloat r, CGFloat g, CGFloat b,
@@ -216,7 +216,7 @@ static BOOL hexStrToRGBA(NSString *str,
     return YES;
 }
 
-@implementation UIColor (WJAdd)
+@implementation UIColor (WJ)
 
 + (UIColor *)randomColor {
     UIColor *randColor = [UIColor colorWithRed:arc4random() % 255 / 255.0f green:arc4random() % 255 / 255.0f blue:arc4random() % 255 / 255.0f alpha:1.0f];

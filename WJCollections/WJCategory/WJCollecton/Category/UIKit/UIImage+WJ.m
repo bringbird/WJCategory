@@ -1,12 +1,12 @@
 //
-//  UIImage+WJAdd.m
+//  UIImage+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIImage+WJAdd.h"
+#import "UIImage+WJ.h"
 #import <ImageIO/ImageIO.h>
 #import <Accelerate/Accelerate.h>
 #import <CoreText/CoreText.h>
@@ -127,7 +127,7 @@ static void cleanupBuffer(void *userData, void *buf_data) {
     free(buf_data);
 }
 
-@implementation UIImage (WJAdd)
+@implementation UIImage (WJ)
 
 + (instancetype)originalImageWithName:(NSString *)imageName {
     if (!self) return nil;
@@ -688,15 +688,15 @@ static void cleanupBuffer(void *userData, void *buf_data) {
 
 - (UIImage *)imageByBlurRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor tintMode:(CGBlendMode)tintBlendMode saturation:(CGFloat)saturation maskImage:(UIImage *)maskImage {
     if (self.size.width < 1 || self.size.height < 1) {
-        NSLog(@"UIImage+WJAdd error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
+        NSLog(@"UIImage+WJ error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
     if (!self.CGImage) {
-        NSLog(@"UIImage+WJAdd error: inputImage must be backed by a CGImage: %@", self);
+        NSLog(@"UIImage+WJ error: inputImage must be backed by a CGImage: %@", self);
         return nil;
     }
     if (maskImage && !maskImage.CGImage) {
-        NSLog(@"UIImage+WJAdd error: effectMaskImage must be backed by a CGImage: %@", maskImage);
+        NSLog(@"UIImage+WJ error: effectMaskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
     
@@ -732,12 +732,12 @@ static void cleanupBuffer(void *userData, void *buf_data) {
         vImage_Error err;
         err = vImageBuffer_InitWithCGImage(&effect, &format, NULL, imageRef, kvImagePrintDiagnosticsToConsole);
         if (err != kvImageNoError) {
-            NSLog(@"UIImage+WJAdd error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", err, self);
+            NSLog(@"UIImage+WJ error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", err, self);
             return nil;
         }
         err = vImageBuffer_Init(&scratch, effect.height, effect.width, format.bitsPerPixel, kvImageNoFlags);
         if (err != kvImageNoError) {
-            NSLog(@"UIImage+WJAdd error: vImageBuffer_Init returned error code %zi for inputImage: %@", err, self);
+            NSLog(@"UIImage+WJ error: vImageBuffer_Init returned error code %zi for inputImage: %@", err, self);
             return nil;
         }
     } else {

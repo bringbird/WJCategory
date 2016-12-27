@@ -1,5 +1,5 @@
 //
-//  UIImage+WJAdd.h
+//  UIImage+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface UIImage (WJAdd)
+@interface UIImage (WJ)
 
 /// 加载原图,防止渲染
 + (instancetype)originalImageWithName:(NSString *)imageName;

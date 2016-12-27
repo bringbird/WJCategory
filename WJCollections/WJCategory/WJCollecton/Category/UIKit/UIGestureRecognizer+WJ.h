@@ -1,5 +1,5 @@
 //
-//  UIGestureRecognizer+WJAdd.h
+//  UIGestureRecognizer+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/24.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIGestureRecognizer (WJAdd)
+@interface UIGestureRecognizer (WJ)
 /**
  Initializes an allocated gesture-recognizer object with a action block.
  

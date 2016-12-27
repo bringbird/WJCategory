@@ -1,5 +1,5 @@
 //
-//  UIColor+WJAdd.h
+//  UIColor+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
@@ -47,7 +47,7 @@ extern void HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
  此分类里的所有值均为‘float’类型（0.0 ~ 1.0）。
  小于’0.0‘的将会转化为’0.0‘以及大于‘1.0的也将会转化为’1.0‘。
  */
-@interface UIColor (WJAdd)
+@interface UIColor (WJ)
 
 /// 随机色
 + (UIColor *)randomColor;

@@ -1,5 +1,5 @@
 //
-//  UIControl+WJAdd.h
+//  UIControl+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/24.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIControl (WJAdd)
+@interface UIControl (WJ)
 
 /**
  Removes all targets and actions for a particular event (or events)
