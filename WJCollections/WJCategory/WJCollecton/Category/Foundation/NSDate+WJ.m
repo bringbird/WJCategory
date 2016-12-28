@@ -1,14 +1,14 @@
 //
-//  NSDate+WJAdd.m
+//  NSDate+WJ.m
 //
 //
 //  Created by bringbird on https://github.com/bringbird 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSDate+WJAdd.h"
+#import "NSDate+WJ.h"
 
-@implementation NSDate (WJAdd)
+@implementation NSDate (WJ)
 
 - (NSDateComponents *)compents:(NSCalendarUnit)comp {
     return [[NSCalendar currentCalendar] components:comp fromDate:self];

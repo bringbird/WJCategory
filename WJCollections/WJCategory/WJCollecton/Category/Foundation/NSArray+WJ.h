@@ -1,5 +1,5 @@
 //
-//  NSArray+WJAdd.h
+//  NSArray+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface NSArray (WJAdd)
+@interface NSArray (WJ)
 
 /// 是否为空数组
 - (BOOL)isEmpetyArray;
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface NSMutableArray (WJAdd)
+@interface NSMutableArray (WJ)
 
 /// 将指定的plist文件数据转成数组，plist：必须为数组类型
 + (nullable NSMutableArray *)arrayWithPlistData:(NSData *)plist;
@@ -87,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)insertObjects:(NSArray *)objects atIndex:(NSUInteger)index;
 
 /// 数组翻转 @[ @1, @2, @3 ] -> @[ @3, @2, @1 ]
-- (instancetype)reverse;
+- (void)reverse;
 
 /// 将数组随机排序
 - (void)shuffle;

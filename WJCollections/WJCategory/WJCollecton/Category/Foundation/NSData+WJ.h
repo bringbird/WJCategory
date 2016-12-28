@@ -1,5 +1,5 @@
 //
-//  NSData+WJAdd.h
+//  NSData+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface NSData (WJAdd)
+@interface NSData (WJ)
 
 #pragma mark - 字符串加密
 

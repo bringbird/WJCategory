@@ -1,16 +1,16 @@
 //
-//  NSData+WJAdd.m
+//  NSData+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSData+WJAdd.h"
+#import "NSData+WJ.h"
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
 
-@implementation NSData (WJAdd)
+@implementation NSData (WJ)
 
 - (NSString *)md2String {
     unsigned char result[CC_MD2_DIGEST_LENGTH];

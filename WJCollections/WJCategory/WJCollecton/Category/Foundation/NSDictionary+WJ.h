@@ -1,5 +1,5 @@
 //
-//  NSDictionary+WJAdd.h
+//  NSDictionary+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface NSDictionary (WJAdd)
+@interface NSDictionary (WJ)
 
 /// 将指定的plist文件数据解析成字典
 + (nullable NSDictionary *)dictionaryWithPlistData:(NSData *)plist;
@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)stringValueForKey:(NSString *)key default:(nullable NSString *)def;
 @end
 
-@interface NSMutableDictionary (WJAdd)
+@interface NSMutableDictionary (WJ)
 
 /// 将指定的plist文件数据解析成字典
 + (NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist;

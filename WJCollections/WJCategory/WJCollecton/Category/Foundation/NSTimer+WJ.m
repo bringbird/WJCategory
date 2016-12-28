@@ -1,14 +1,14 @@
 //
-//  NSTimer+WJAdd.m
+//  NSTimer+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSTimer+WJAdd.h"
+#import "NSTimer+WJ.h"
 
-@implementation NSTimer (WJAdd)
+@implementation NSTimer (WJ)
 
 + (void)execBlock:(NSTimer *)timer {
     if ([timer userInfo]) {

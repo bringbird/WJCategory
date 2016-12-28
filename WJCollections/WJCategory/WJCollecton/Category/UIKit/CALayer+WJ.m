@@ -1,14 +1,14 @@
 //
-//  CALayer+WJAdd.m
+//  CALayer+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "CALayer+WJAdd.h"
+#import "CALayer+WJ.h"
 
-@implementation CALayer (WJAdd)
+@implementation CALayer (WJ)
 
 - (UIImage *)snapshotImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);

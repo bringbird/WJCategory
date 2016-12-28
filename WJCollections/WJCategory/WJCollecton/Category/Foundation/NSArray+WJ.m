@@ -1,14 +1,14 @@
 //
-//  NSArray+WJAdd.m
+//  NSArray+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSArray+WJAdd.h"
+#import "NSArray+WJ.h"
 
-@implementation NSArray (WJAdd)
+@implementation NSArray (WJ)
 
 - (BOOL)isEmpetyArray {
     return self.count == 0;
@@ -123,7 +123,7 @@
 @end
 
 
-@implementation NSMutableArray (WJAdd)
+@implementation NSMutableArray (WJ)
 
 + (NSMutableArray *)arrayWithPlistData:(NSData *)plist {
     if (!plist) return nil;
@@ -200,13 +200,12 @@
     }
 }
 
-- (instancetype)reverse {
+- (void)reverse {
     NSUInteger count = self.count;
     int mid = floor(count / 2.0);
     for (NSUInteger i = 0; i < mid; i++) {
         [self exchangeObjectAtIndex:i withObjectAtIndex:(count - (i + 1))];
     }
-    return self;
 }
 
 - (void)shuffle {

@@ -1,12 +1,12 @@
 //
-//  NSDictionary+WJAdd.m
+//  NSDictionary+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSDictionary+WJAdd.h"
+#import "NSDictionary+WJ.h"
 
 @interface XMLDictionaryParser : NSObject <NSXMLParserDelegate>
 @end
@@ -154,7 +154,7 @@
 #undef XMLPref
 @end
 
-@implementation NSDictionary (WJAdd)
+@implementation NSDictionary (WJ)
 
 + (NSDictionary *)dictionaryWithPlistData:(NSData *)plist {
     if (!plist) return nil;
@@ -352,7 +352,7 @@ return def;
 }
 @end
 
-@implementation NSMutableDictionary (WJAdd)
+@implementation NSMutableDictionary (WJ)
 
 + (NSMutableDictionary *)dictionaryWithPlistData:(NSData *)plist {
     if (!plist) return nil;

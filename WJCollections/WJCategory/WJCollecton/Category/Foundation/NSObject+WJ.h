@@ -1,5 +1,5 @@
 //
-//  NSObject+WJAdd.h
+//  NSObject+WJ.h
 //  WJCategory
 //
 //  Created by 韦明杰 on 2016/9/11.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (WJAdd)
+@interface NSObject (WJ)
 
 /**
  Copy a instance with the receiver's properties.

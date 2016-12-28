@@ -1,5 +1,5 @@
 //
-//  UIBarButtonItem+WJAdd.h
+//  UIBarButtonItem+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/21.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIBarButtonItem (WJAdd)
+@interface UIBarButtonItem (WJ)
 
 /// 高亮
 + (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action image:(NSString *)image highlightedImage:(NSString *)highlightedImage;

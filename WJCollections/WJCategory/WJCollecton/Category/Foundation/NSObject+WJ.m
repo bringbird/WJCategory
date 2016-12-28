@@ -1,15 +1,15 @@
 //
-//  NSObject+WJAdd.m
+//  NSObject+WJ.m
 //  WJCategory
 //
 //  Created by 韦明杰 on 2016/9/11.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSObject+WJAdd.h"
+#import "NSObject+WJ.h"
 #import <YYModel/NSObject+YYModel.h>
 
-@implementation NSObject (WJAdd)
+@implementation NSObject (WJ)
 
 - (id)modelCopy {
     return  [self yy_modelCopy];

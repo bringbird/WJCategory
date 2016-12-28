@@ -1,5 +1,5 @@
 //
-//  NSDate+WJAdd.h
+//  NSDate+WJ.h
 //
 //
 //  Created by bringbird on https://github.com/bringbird 16/8/21.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (WJAdd)
+@interface NSDate (WJ)
 @property (nonatomic, readonly) NSInteger year;         ///< 年
 @property (nonatomic, readonly) NSInteger month;        ///< 月
 @property (nonatomic, readonly) NSInteger day;          ///< 日

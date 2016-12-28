@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "WJCollection.h"
 
 
 @interface ViewController () 
@@ -18,15 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor randomColor];
-    NSArray *arr = @[self];
-    NSArray *arr1 = @[self,arr,[UIColor blueColor],[UIButton new],[NSObject new]];
-    WJLog(@"")
-    WJLog(@"")
-    WJLog(@"%@",arr1.stringEncoded)
-    WJLog(@"")
-    WJLog(@"")
-    WJLog(@"%@",arr1.stringPrettyEncoded)
 }
 
 @end

@@ -1,17 +1,17 @@
 //
-//  NSString+WJAdd.m
+//  NSString+WJ.m
 //
 //
 //  Created by bringbird on https://github.com/bringbird 16/8/21.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSString+WJAdd.h"
-#import "NSData+WJAdd.h"
+#import "NSString+WJ.h"
+#import "NSData+WJ.h"
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
 
-@implementation NSString (WJAdd)
+@implementation NSString (WJ)
 
 - (NSString *)md2String {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] md2String];
@@ -362,7 +362,7 @@
 }
 @end
 
-@implementation NSNumber (WJAdd)
+@implementation NSNumber (WJ)
 + (NSNumber *)numberWithString:(NSString *)string {
     NSString *str = [[string stringByTrim] lowercaseString];
     if (!str || !str.length) {

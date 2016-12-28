@@ -1,5 +1,5 @@
 //
-//  CALayer+WJAdd.h
+//  CALayer+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface CALayer (WJAdd)
+@interface CALayer (WJ)
 
 /**
  Take snapshot without transform, image's size equals to bounds.

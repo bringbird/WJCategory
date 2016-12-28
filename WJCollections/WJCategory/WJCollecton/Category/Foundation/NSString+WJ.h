@@ -1,5 +1,5 @@
 //
-//  NSString+WJAdd.h
+//  NSString+WJ.h
 //
 //
 //  Created by bringbird on https://github.com/bringbird 16/8/21.
@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@interface NSString (WJAdd)
+@interface NSString (WJ)
 
 /// md2 加密
 - (nullable NSString *)md2String;
@@ -148,7 +148,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (unsigned short)unsignedShortValue;
 - (unsigned long long)unsignedLongLongValue;
 @end
-@interface NSNumber (WJAdd)
+@interface NSNumber (WJ)
 /// NSNumber 转 NSString 可以是 @"12"、@"12.345"、@" -0xFF"、@" .23e99 " 形式。
 + (nullable NSNumber *)numberWithString:(NSString *)string;
 @end

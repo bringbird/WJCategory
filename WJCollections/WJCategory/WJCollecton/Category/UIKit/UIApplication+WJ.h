@@ -1,5 +1,5 @@
 //
-//  UIApplication+WJAdd.h
+//  UIApplication+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface UIApplication (WJAdd)
+@interface UIApplication (WJ)
 
 /// "Documents" folder in this app's sandbox.
 @property (nonatomic, readonly) NSURL *documentsURL;

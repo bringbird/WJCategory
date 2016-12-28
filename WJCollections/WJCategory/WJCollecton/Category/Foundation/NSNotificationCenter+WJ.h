@@ -1,5 +1,5 @@
 //
-//  NSNotificationCenter+WJAdd.h
+//  NSNotificationCenter+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
-@interface NSNotificationCenter (WJAdd)
+@interface NSNotificationCenter (WJ)
 
 /// 在主线程里发送通知，如果当前线程为主线程，将同步发送，否则将异步发送。
 - (void)postNotificationOnMainThread:(NSNotification *)notification;

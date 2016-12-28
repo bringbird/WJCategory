@@ -1,15 +1,15 @@
 //
-//  NSNotificationCenter+WJAdd.m
+//  NSNotificationCenter+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "NSNotificationCenter+WJAdd.h"
+#import "NSNotificationCenter+WJ.h"
 #include <pthread.h>
 
-@implementation NSNotificationCenter (WJAdd)
+@implementation NSNotificationCenter (WJ)
 
 - (void)postNotificationOnMainThread:(NSNotification *)notification {
     if (pthread_main_np()) return [self postNotification:notification];

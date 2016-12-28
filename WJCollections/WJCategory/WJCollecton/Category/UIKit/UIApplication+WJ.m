@@ -1,14 +1,14 @@
 //
-//  UIApplication+WJAdd.m
+//  UIApplication+WJ.m
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
 //  Copyright © 2016年 韦明杰. All rights reserved.
 //
 
-#import "UIApplication+WJAdd.h"
+#import "UIApplication+WJ.h"
 
-@implementation UIApplication (WJAdd)
+@implementation UIApplication (WJ)
 - (NSURL *)documentsURL {
     return [[[NSFileManager defaultManager]
              URLsForDirectory:NSDocumentDirectory

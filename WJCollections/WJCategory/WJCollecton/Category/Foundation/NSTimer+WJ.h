@@ -1,5 +1,5 @@
 //
-//  NSTimer+WJAdd.h
+//  NSTimer+WJ.h
 //  WJCategory
 //
 //  Created by bringbird on 16/8/22.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSTimer (WJAdd)
+@interface NSTimer (WJ)
 
 /// NSDefaultRunLoopMode 模式下的定时器，1秒后自动触发，block：会造成强引用，repeats：是否重复调用block里的函数。
 + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)second repeat:(BOOL)repeats block:(void (^)(NSTimer *timer))block;
