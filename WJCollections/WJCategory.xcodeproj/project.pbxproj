@@ -42,6 +42,7 @@
 		6BAB43561D6B2CE00006CA85 /* NSTimer+WJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB43551D6B2CE00006CA85 /* NSTimer+WJ.m */; };
 		6E0BADEE1E0F6360009F2E3F /* WJPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0BADED1E0F6360009F2E3F /* WJPhotoGroupView.m */; };
 		6E2987011DF06F6F000CDEF2 /* WJAuthorizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2987001DF06F6F000CDEF2 /* WJAuthorizeTool.m */; };
+		6E9929A41E95E1680059A998 /* WJFTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9929A31E95E1680059A998 /* WJFTPClient.m */; };
 		6EBEF7B51DFD5EE500FE10AF /* NSObject+WJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBEF7B41DFD5EE500FE10AF /* NSObject+WJ.m */; };
 		6EC16A3E1E0E400A00AE00F9 /* WJHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EC16A3D1E0E400A00AE00F9 /* WJHUD.bundle */; };
 		6EC16A411E0E418E00AE00F9 /* WJUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC16A401E0E418E00AE00F9 /* WJUserDefault.m */; };
@@ -122,6 +123,8 @@
 		6E0BADED1E0F6360009F2E3F /* WJPhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPhotoGroupView.m; sourceTree = "<group>"; };
 		6E2986FF1DF06F6F000CDEF2 /* WJAuthorizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJAuthorizeTool.h; sourceTree = "<group>"; };
 		6E2987001DF06F6F000CDEF2 /* WJAuthorizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJAuthorizeTool.m; sourceTree = "<group>"; };
+		6E9929A21E95E1680059A998 /* WJFTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFTPClient.h; sourceTree = "<group>"; };
+		6E9929A31E95E1680059A998 /* WJFTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFTPClient.m; sourceTree = "<group>"; };
 		6EBEF7B31DFD5EE500FE10AF /* NSObject+WJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+WJ.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6EBEF7B41DFD5EE500FE10AF /* NSObject+WJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+WJ.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6EC16A3D1E0E400A00AE00F9 /* WJHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WJHUD.bundle; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				6EC16A481E0E422600AE00F9 /* WJHUD-SV */,
 				6B82C3721DBC39B200CA6760 /* WJTimer.h */,
 				6B82C3731DBC39B200CA6760 /* WJTimer.m */,
+				6E9929A21E95E1680059A998 /* WJFTPClient.h */,
+				6E9929A31E95E1680059A998 /* WJFTPClient.m */,
 				6B5BFE641D68FD7800E3251A /* WJNetworking.h */,
 				6B5BFE651D68FD7800E3251A /* WJNetworking.m */,
 				6B82C3781DBC3EC300CA6760 /* WJImagePicker.h */,
@@ -402,6 +407,7 @@
 				TargetAttributes = {
 					6B8B27FE1D68AB65006331FB = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 86Z46MM2B9;
 					};
 				};
 			};
@@ -509,6 +515,7 @@
 				6B7D3E8B1D7B8AB9005171C6 /* WJMoveView.m in Sources */,
 				6B8017A31D6DFBD600866A80 /* UITableView+WJ.m in Sources */,
 				6EBEF7B51DFD5EE500FE10AF /* NSObject+WJ.m in Sources */,
+				6E9929A41E95E1680059A998 /* WJFTPClient.m in Sources */,
 				6EC16A411E0E418E00AE00F9 /* WJUserDefault.m in Sources */,
 				6EC16A4E1E0E422600AE00F9 /* WJSVHUD.m in Sources */,
 				6B8017A01D6DFB9000866A80 /* UIScrollView+WJ.m in Sources */,
@@ -642,9 +649,11 @@
 			baseConfigurationReference = E8D86DC17FDFCDDBCB7016CF /* Pods-WJCategory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86Z46MM2B9;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WJCategory/PrefixHeader.pch";
 				INFOPLIST_FILE = WJCategory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.bringbird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -656,9 +665,11 @@
 			baseConfigurationReference = E4FD1D7011BB92492529A510 /* Pods-WJCategory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86Z46MM2B9;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WJCategory/PrefixHeader.pch";
 				INFOPLIST_FILE = WJCategory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.bringbird;
 				PRODUCT_NAME = "$(TARGET_NAME)";

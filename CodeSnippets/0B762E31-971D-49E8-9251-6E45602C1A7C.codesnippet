@@ -25,6 +25,8 @@
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Multiple Button Choice</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Multiple Choice</string>
 	<key>IDECodeSnippetUserSnippet</key>

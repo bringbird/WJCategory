@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, copy) NSString *&lt;#name#&gt;  ///&lt; &lt;#description#&gt; </string>
+	<string>@property (copy, nonatomic) NSString *&lt;#name#&gt;  ///&lt; &lt;#description#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CB020F3C-6452-496D-9BEF-90052DE1A766</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>copy property</string>
+	<string>Copy Property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property copy</string>
 	<key>IDECodeSnippetUserSnippet</key>

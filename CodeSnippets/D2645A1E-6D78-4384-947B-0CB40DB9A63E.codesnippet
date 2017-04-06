@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,copy) &lt;#returnType#&gt; (^&lt;#block's name#&gt;)(&lt;#arguments#&gt;)</string>
+	<string>@property (copy, nonatomic) &lt;#returnType#&gt; (^&lt;#block's name#&gt;)(&lt;#arguments#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>D2645A1E-6D78-4384-947B-0CB40DB9A63E</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>block property</string>
+	<string>Block Property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property block</string>
 	<key>IDECodeSnippetUserSnippet</key>

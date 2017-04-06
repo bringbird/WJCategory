@@ -20,7 +20,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>view Did Load</string>
+	<string>View Did Load</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>viewDidLoad</string>
 	<key>IDECodeSnippetUserSnippet</key>

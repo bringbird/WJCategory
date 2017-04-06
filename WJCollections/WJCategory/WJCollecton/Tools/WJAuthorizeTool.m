@@ -82,7 +82,7 @@ static inline double systemVersion() {
 }
 
 + (AuthorizedStatu)getAuthorizedWityMediaType:(NSString *)mediatype {
-    __block AuthorizedStatu Astatu;
+    __block AuthorizedStatu Astatu = 0;
     if(systemVersion() >= 7.0) {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:mediatype];
         switch (status) {

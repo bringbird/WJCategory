@@ -64,7 +64,7 @@ CGFloat CGAffineTransformGetTranslateY(CGAffineTransform transform);
  
  @see http://stackoverflow.com/questions/13291796/calculate-values-for-a-cgaffinetransform-from-three-points-in-each-of-two-uiview
  */
-CGAffineTransform WJCGAffineTransformGetFromPoints(CGPoint before[3], CGPoint after[3]);
+CGAffineTransform WJCGAffineTransformGetFromPoints(CGPoint before[_Nullable 3], CGPoint after[3]);
 
 /// Get the transform which can converts a point from the coordinate system of a given view to another.
 CGAffineTransform WJCGAffineTransformGetFromViews(UIView *from, UIView *to);

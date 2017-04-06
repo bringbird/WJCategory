@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, assign) &lt;#class#&gt; &lt;#name#&gt;  ///&lt; &lt;#description#&gt; </string>
+	<string>@property (assign, nonatomic) &lt;#class#&gt; &lt;#name#&gt;  ///&lt; &lt;#description#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>04F9BEB3-4EB0-4657-B802-8E2D541E13AD</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>assign property</string>
+	<string>Assign Property</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property assign</string>
 	<key>IDECodeSnippetUserSnippet</key>
