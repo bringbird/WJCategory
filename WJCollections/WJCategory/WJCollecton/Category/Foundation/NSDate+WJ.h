@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (WJ)
+@property (nonatomic, readonly) NSInteger daysFromNow;  ///< 从指定日期到现在的天数
 @property (nonatomic, readonly) NSInteger year;         ///< 年
 @property (nonatomic, readonly) NSInteger month;        ///< 月
 @property (nonatomic, readonly) NSInteger day;          ///< 日
