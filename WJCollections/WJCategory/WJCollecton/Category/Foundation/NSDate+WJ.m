@@ -9,6 +9,16 @@
 #import "NSDate+WJ.h"
 
 @implementation NSDate (WJ)
+    
+- (NSInteger)daysFromNow {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *oldDate = [dateFormatter dateFromString:[self stringWithFormat:@"yyyy-MM-dd"]];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    unsigned int unitFlags = NSCalendarUnitDay;
+    NSDateComponents *comps = [gregorian components:unitFlags fromDate:oldDate  toDate:[NSDate date]  options:0];
+    return [comps day];
+}
 
 - (NSDateComponents *)compents:(NSCalendarUnit)comp {
     return [[NSCalendar currentCalendar] components:comp fromDate:self];
